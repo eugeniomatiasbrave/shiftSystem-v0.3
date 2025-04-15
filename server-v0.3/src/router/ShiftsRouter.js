@@ -1,0 +1,24 @@
+import BaseRouter from "./BaseRouter.js";
+import shiftController from "../controllers/shifts.controller.js";
+import { shiftValidator } from "../middlewares/validate.js"; // Importa el middleware de validación
+
+class ShiftsRouter extends BaseRouter {
+	
+	init(){
+		this.get('/', ['PUBLIC','USER'], shiftController.getShifts); /* Consultar todos los turnos */
+        this.get('/:id_shift', ['PUBLIC','USER'], shiftController.getShiftById); /* Consultar un turno */
+        this.get('/:date', ['USER'], shiftController.getShiftByDate ); /* Consultar turnos por fecha */
+        this.get('/user/:id_user', ['USER'], shiftController.getShiftsByUser); /* Consultar turnos por usuario */
+        this.post('/', ['ADMIN'], shiftValidator, shiftController.createShift); /* Crear un turno */
+        this.put('/:id_shift', ['ADMIN'], shiftController.updateShift); /* Actualizar turno */
+        this.put('/reserve/:id_shift', ['USER'], shiftController.reserveShift); /* Reservar un turno */
+        this.put('/cancel/:id_shift', ['USER'], shiftController.cancelShift); /* Cancelar un turno */
+        this.put('/reschedule/:id_shift', ['USER'], shiftController.rescheduleShift); /* Reprogramar un turno */
+        this.delete('/:id_shift', ['ADMIN'], shiftController.deleteShift); /* Eliminar turno */
+        this.put('/status/:id_shift', ['ADMIN'], shiftController.updateShiftStatus); /* Actualizar estado del turno */
+	}
+}
+
+const shiftsRouter = new ShiftsRouter();
+export default shiftsRouter.getRouter(); // exporto una instancia de ProductsRouter().getRouter() para que sea un objeto instanciado y no una clase.
+

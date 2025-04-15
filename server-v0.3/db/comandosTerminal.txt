@@ -1,0 +1,7 @@
+
+COMANDOS SQL:
+
+Acceder a base: mysql -h localhost -P 3306 -u Euge -p  
+
+Crear base si no esta creada: CREATE DATABASE IF NOT EXISTS BaseApi_stg;
+

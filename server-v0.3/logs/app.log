@@ -1,0 +1,78 @@
+[2025-03-02T20:35:46.329] [INFO] default - User logged in successfully: P@example.com
+[2025-03-03T17:32:56.992] [INFO] default - Product created successfully: products {
+  dataValues: {
+    id: 5,
+    name: 'Indulina Detemir',
+    description: '100/ml x3 lap.',
+    price: 80000,
+    updatedAt: 2025-03-03T20:32:56.954Z,
+    createdAt: 2025-03-03T20:32:56.954Z
+  },
+  _previousDataValues: {
+    name: 'Indulina Detemir',
+    description: '100/ml x3 lap.',
+    price: 80000,
+    id: 5,
+    createdAt: 2025-03-03T20:32:56.954Z,
+    updatedAt: 2025-03-03T20:32:56.954Z
+  },
+  uniqno: 1,
+  _changed: Set(0) {},
+  _options: {
+    isNewRecord: true,
+    _schema: null,
+    _schemaDelimiter: '',
+    attributes: undefined,
+    include: undefined,
+    raw: undefined,
+    silent: undefined
+  },
+  isNewRecord: false
+}
+[2025-03-21T15:41:36.159] [ERROR] default - Error registering user: TypeError: res.status is not a function
+    at HttpRes.Success (file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/utils/httpResponse.js:18:14)
+    at SessionRouter.register (file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/controllers/sessions.controller.js:12:17)
+    at file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/middlewares/passportCall.js:11:13
+    at strategy.success (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport\lib\middleware\authenticate.js:222:18)
+    at verified (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport-local\lib\strategy.js:83:10)
+    at Strategy._verify (file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/config/passport.config.js:36:20)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2025-03-21T15:42:27.988] [ERROR] default - Error registering user: TypeError: res.status is not a function
+    at HttpRes.Success (file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/utils/httpResponse.js:18:14)
+    at SessionRouter.register (file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/controllers/sessions.controller.js:12:17)
+    at file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/middlewares/passportCall.js:11:13
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport-local\lib\strategy.js:82:30)
+[2025-03-25T20:03:47.460] [INFO] default - result {
+  name: 'Elegant Silk Hat',
+  description: 'Featuring Krypton-enhanced technology, our Shoes offers unparalleled imaginary performance',
+  price: '214.59'
+}
+[2025-03-25T20:11:46.394] [INFO] default - result {
+  name: 'Unbranded Marble Mouse',
+  description: 'New Sausages model with 43 GB RAM, 996 GB storage, and free features',
+  price: '951.79'
+}
+[2025-03-25T20:16:57.479] [INFO] default - result {
+  name: 'Rustic Metal Pizza',
+  description: 'The Face to face zero tolerance initiative Pants offers reliable performance and closed design',
+  price: '235.09'
+}
+[2025-03-27T16:55:47.957] [INFO] default - result {
+  name: 'Fresh Aluminum Chair',
+  description: 'Savor the sweet essence in our Gloves, designed for red culinary adventures',
+  price: '31.18'
+}
+[2025-03-27T17:04:33.276] [INFO] default - result {
+  name: 'Sleek Metal Chicken',
+  description: 'The Lavern Pizza is the latest in a series of distorted products from Bashirian and Sons',
+  price: '988.91'
+}

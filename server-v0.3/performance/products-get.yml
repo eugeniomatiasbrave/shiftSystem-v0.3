@@ -1,0 +1,11 @@
+config:
+  target: 'http://localhost:8080' # Cambia esto a la URL de tu servidor
+  phases:
+    - duration: 60 # Duración de la prueba en segundos
+      arrivalRate: 10 # Número de solicitudes por segundo
+scenarios:
+  - flow:
+      - get:
+          url: "/api/products" # Ruta de la API a probar (GET)
+
+# comando en cli: artillery run performance/products-get.yml -o performance/products-get-report.json
