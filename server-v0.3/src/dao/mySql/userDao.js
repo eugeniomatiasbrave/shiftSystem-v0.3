@@ -8,7 +8,7 @@ export default class UserDao {
       console.error("Error in get:", error);
       throw new Error("Failed to get users");
     }
-  }
+  };
 
   async getOne(params) {
     try {
@@ -17,7 +17,16 @@ export default class UserDao {
       console.error("Error in getOne:", error);
       throw new Error("Failed to get user");
     }
-  }
+  };
+
+  async getByEmail(email) {
+    try {
+      return await UserModel.findOne({ where: { email } });
+    } catch (error) {
+      console.error("Error in getByEmail:", error);
+      throw new Error("Failed to get user by email");
+    }
+  };
 
   async create(userData) {
     try {
@@ -26,18 +35,17 @@ export default class UserDao {
       console.error("Error in create:", error);
       throw new Error("Failed to create user");
     }
-  }
+  };
 
   async update(id_user, updatedData) {
     try {
-      return await UserModel.update(updatedData, {
-        where: { id_user: id_user },
+      return await UserModel.update(updatedData, { where: { id_user }
       });
     } catch (error) {
-      console.error("Error in update:", error);
+      console.error("Error in update user:", error);
       throw new Error("Failed to update user");
     }
-  }
+  };
 
   async delete(id_user) {
     try {
@@ -46,7 +54,7 @@ export default class UserDao {
       console.error("Error in delete:", error);
       throw new Error("Failed to delete user");
     }
-  }
+  };
 
   async Password(id_user, password) {
     try {
@@ -55,5 +63,6 @@ export default class UserDao {
       console.error("Error in updatePassword:", error);
       throw new Error("Failed to update password");
     }
-  }
-}
+  };
+  
+};

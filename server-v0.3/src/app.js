@@ -9,12 +9,12 @@ import passport from "passport"; // importo passport desde la carpeta node_modul
 import cookieParser from "cookie-parser"; // importo cookieParser desde la carpeta node_modules.
 import cors from "cors"; // Importa el paquete cors desde la carpeta node_modules.
 import { handlerError } from "./middlewares/errorHandler.js";
-import helmet from "helmet";
+//import helmet from "helmet";
 
 // Middleware de Helmet
 const app = express(); // coloco al metodo express en una constante llamada app.
 
-app.use(helmet());
+//
 app.use(express.json()); // uso el metodo json de express, para que el servidor pueda leer json.
 app.use(cookieParser()); // uso el metodo cookieParser de express.
 const corsOptions = {

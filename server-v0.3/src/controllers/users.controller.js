@@ -79,24 +79,7 @@ const createUser = async (req, res, next) => {
   }
 };
 
-const updateUser = async (req, res) => {
-  try {
-    const { id_user } = req.params; // Obtiene el id_user de los parámetros de la URL
-    const user = await usersServices.getUserBy({ id_user });
-    if (!user) {
-      logger.warn(`User with id_user ${id_user} not found`);
-      throw new NotFoundError("User not found"); // Pasa el error al manejador de errores
-    }
-    const updatedData = req.body; // Obtiene los datos actualizados del body de la peticion
-    const result = await usersServices.updateUser(id_user, updatedData);
-    HttpRes.Success(res, result); // Usa el método Success de la clase HttpRes para enviar la respuesta
-  } catch (error) {
-    logger.error("Error updating user:", error);
-    next(error); // Pasa el error al manejador de errores
-  }
-};
-
-const deleteUser = async (req, res) => {
+const deleteUser = async (req, res, next) => {
   try {
     const { id_user } = req.params; // Obtiene el id_user de los parámetros de la URL
     const user = await usersServices.getUserBy({ id_user });
@@ -112,33 +95,52 @@ const deleteUser = async (req, res) => {
   }
 };
 
-const updatePassword = async (req, res) => {
-  try {
+
+const updateProfileUser = async (req, res, next) => {
+  try { 
     const { id_user } = req.params; // Obtiene el id_user de los parámetros de la URL
+    console.log("Param-id_user", id_user);
+    
+    //const userId = req.user.id_user; // Obtiene el id_user del usuario autenticado
+    //console.log("UserId de Sesion", userId);
+    
+    const { firstName, lastName, email} = req.body; // Obtiene los datos del body de la peticion
+    console.log("Body-de-Perfil", req.body);
+
+    if (!id_user || !firstName || !lastName || !email) {
+      logger.warn("Incomplete profile update data");
+      throw new BadRequestError("All fields are required");
+    }
+
+    //if (userId !== id_user) {
+    //  logger.warn("Unauthorized profile update attempt");
+    //  throw new NotFoundError("You can only update your own profile");
+    //}
+/*
     const user = await usersServices.getUserBy({ id_user });
     if (!user) {
       logger.warn(`User with id_user ${id_user} not found`);
       throw new NotFoundError("User not found"); // Pasa el error al manejador de errores
     }
-    const { password } = req.body; // Obtiene la nueva contraseña del body de la peticion
-    if (!password) {
-      logger.warn("Password is required for update");
-      throw new ValidatorError("Password is required for update"); // Pasa el error al manejador de errores
-    }
-    const result = await usersServices.updatePassword(id_user, password); // Llama al servicio para actualizar la contraseña
+*/
+    const userData = {firstName,lastName,email};
+    const result = await usersServices.updateUser(id_user, userData); // Llama al servicio para actualizar el usuario
+
     HttpRes.Success(res, result); // Usa el método Success de la clase HttpRes para enviar la respuesta
   } catch (error) {
-    logger.error("Error updating password:", error);
+    logger.error("Error updating user profile:", error);
     next(error); // Pasa el error al manejador de errores
   }
 };
 
+ // const updatePassword = async (req, res) => {};
+
 export default {
   getUsers,
   getUserById,
-  createUser,
-  updateUser,
-  deleteUser,
   getUserByEmail,
-  updatePassword,
+  createUser,
+  deleteUser,
+  updateProfileUser,
+ // updatePassword,
 };

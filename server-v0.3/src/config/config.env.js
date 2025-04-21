@@ -17,7 +17,8 @@ config({
 
 export default {
   app: {
-    PORT: process.env.PORT || 8082,
+    PORT: process.env.PORT,
+    ADMIN_EMAIL: process.env.ADMIN_EMAIL,
     ADMIN_PWD: process.env.ADMIN_PASSWORD,
     PERSISTENCE: process.env.PERSISTENCE || "MYSQL",
     MODE: process.env.MODE,
@@ -28,10 +29,5 @@ export default {
     USER: process.env.MYSQL_USER,
     PASSWORD: process.env.MYSQL_PASSWORD,
     DATABASE: process.env.MYSQL_DATABASE,
-  },
-  auth: {
-    jwt: {
-      SECRET: process.env.JWT_SECRET,
-    },
   },
 };

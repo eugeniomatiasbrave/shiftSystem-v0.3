@@ -9,8 +9,7 @@ class SessionRouter extends BaseRouter {
 		this.post('/register', ['PUBLIC'], userValidator, passportCall('register'), sessionsController.register);
         this.post('/login', ['PUBLIC'], loginValidator, passportCall('login'), sessionsController.login);
         this.post('/logout', ['USER','ADMIN'], sessionsController.logout);
-		this.get('/current', ['USER','ADMIN'], passportCall('current'), sessionsController.current); // podra tener respuesta el publico como  aquellos con rol user.
-		this.get('/admin', ['ADMIN'], sessionsController.adminAccess);
+		//this.get('/current', ['USER','ADMIN'], passportCall('current'), sessionsController.current); // podra tener respuesta el publico como  aquellos con rol user.
 	}
 }
 

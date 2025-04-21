@@ -1,11 +1,12 @@
 import jwt from "jsonwebtoken";
-import config from "../config/config.env.js";
-import userDto from "../dto/userDto.js";
 import logger from "../config/log4js.config.js";
 import HttpRes from "../utils/httpResponse.js";
 import { UnauthorizedError } from "../utils/customError.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
-const SECRET = config.auth.jwt.SECRET;
+
+const { JWT_SECRET } = process.env; // Asegúrate de que JWT_SECRET esté definido en tu archivo .env
 
 const register = (req, res, next) => {
   try {
@@ -18,24 +19,33 @@ const register = (req, res, next) => {
 
 const login = async (req, res, next) => {
   try {
-    const user = req.user;
-    const TokenResponseDto = userDto.forToken(user); // Use userDto.js to format the user data for the token
-    const token = jwt.sign(TokenResponseDto, SECRET, { expiresIn: "1h" });
-    res.cookie("token", token, { httpOnly: true, secure: true }); // Asegura las cookies
-    HttpRes.Success(res, "Logged in");
+      const user = req.user;
+      const tokenPayload = {
+          id_user: user.id_user,
+          firstName: user.firstName,
+          lastName: user.lastName,
+          email: user.email,
+          role: user.role,
+      };
+      const token = jwt.sign(tokenPayload, JWT_SECRET, { expiresIn: "1d" });
+      res.cookie("token", token).send({ status: "success", message: "logged in" });
   } catch (error) {
-    logger.error("Error logging in user:", error);
-    next(error);
+      logger.error("Error logging in user:", error);
+      next(error);
   }
 };
 
-const adminAccess = async (req, res, next) => {
+const current = async (req, res, next) => {
   try {
-    const admin = req.user;
-    HttpRes.Success(res, admin);
+    const user = req.user;
+    if (!user) {
+      logger.warn("Unauthorized access attempt");
+      throw new UnauthorizedError("Unauthorized access"); // Pasa el error al manejador de errores
+    }
+    HttpRes.Success(res, user, "Current user retrieved"); // Envía el usuario actual en la respuesta
   } catch (error) {
-    logger.error("Error granting admin access:", error);
-    next(error);
+    logger.error("Error retrieving current user:", error);
+    next(error); // Pasa el error al manejador de errores
   }
 };
 
@@ -49,25 +59,9 @@ const logout = async (req, res, next) => {
   }
 };
 
-const current = async (req, res, next) => {
-  // Add the current function, which will return the current user, if logged in, or an error message if not
-  try {
-    const user = req.user;
-    if (!user) {
-      logger.warn("Unauthorized access attempt");
-      throw new UnauthorizedError("Unauthorized access"); // Pasa el error al manejador de errores
-    }
-    HttpRes.Success(res, user);
-  } catch (error) {
-    logger.error("Error retrieving current user:", error);
-    next(error); // Pasa el error al manejador de errores
-  }
-};
-
 export default {
   register,
   login,
   logout,
-  adminAccess,
   current,
 };

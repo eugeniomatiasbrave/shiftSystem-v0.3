@@ -1,78 +1,368 @@
-[2025-03-02T20:35:46.329] [INFO] default - User logged in successfully: P@example.com
-[2025-03-03T17:32:56.992] [INFO] default - Product created successfully: products {
-  dataValues: {
-    id: 5,
-    name: 'Indulina Detemir',
-    description: '100/ml x3 lap.',
-    price: 80000,
-    updatedAt: 2025-03-03T20:32:56.954Z,
-    createdAt: 2025-03-03T20:32:56.954Z
-  },
-  _previousDataValues: {
-    name: 'Indulina Detemir',
-    description: '100/ml x3 lap.',
-    price: 80000,
-    id: 5,
-    createdAt: 2025-03-03T20:32:56.954Z,
-    updatedAt: 2025-03-03T20:32:56.954Z
-  },
-  uniqno: 1,
-  _changed: Set(0) {},
-  _options: {
-    isNewRecord: true,
-    _schema: null,
-    _schemaDelimiter: '',
-    attributes: undefined,
-    include: undefined,
-    raw: undefined,
-    silent: undefined
-  },
-  isNewRecord: false
-}
-[2025-03-21T15:41:36.159] [ERROR] default - Error registering user: TypeError: res.status is not a function
-    at HttpRes.Success (file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/utils/httpResponse.js:18:14)
-    at SessionRouter.register (file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/controllers/sessions.controller.js:12:17)
-    at file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/router/BaseRouter.js:43:20
-    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\express\lib\router\layer.js:95:5)
-    at next (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\express\lib\router\route.js:149:13)
-    at file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/middlewares/passportCall.js:11:13
-    at strategy.success (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport\lib\middleware\authenticate.js:222:18)
-    at verified (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport-local\lib\strategy.js:83:10)
-    at Strategy._verify (file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/config/passport.config.js:36:20)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-[2025-03-21T15:42:27.988] [ERROR] default - Error registering user: TypeError: res.status is not a function
-    at HttpRes.Success (file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/utils/httpResponse.js:18:14)
-    at SessionRouter.register (file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/controllers/sessions.controller.js:12:17)
-    at file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/router/BaseRouter.js:43:20
-    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\express\lib\router\layer.js:95:5)
-    at next (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\express\lib\router\route.js:149:13)
-    at file:///C:/Users/eugen/OneDrive/Desktop/app-model-base/back-base/src/middlewares/passportCall.js:11:13
-    at allFailed (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport\lib\middleware\authenticate.js:110:18)
-    at attempt (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport\lib\middleware\authenticate.js:183:28)
-    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport\lib\middleware\authenticate.js:314:9)
-    at verified (C:\Users\eugen\OneDrive\Desktop\app-model-base\back-base\node_modules\passport-local\lib\strategy.js:82:30)
-[2025-03-25T20:03:47.460] [INFO] default - result {
-  name: 'Elegant Silk Hat',
-  description: 'Featuring Krypton-enhanced technology, our Shoes offers unparalleled imaginary performance',
-  price: '214.59'
-}
-[2025-03-25T20:11:46.394] [INFO] default - result {
-  name: 'Unbranded Marble Mouse',
-  description: 'New Sausages model with 43 GB RAM, 996 GB storage, and free features',
-  price: '951.79'
-}
-[2025-03-25T20:16:57.479] [INFO] default - result {
-  name: 'Rustic Metal Pizza',
-  description: 'The Face to face zero tolerance initiative Pants offers reliable performance and closed design',
-  price: '235.09'
-}
-[2025-03-27T16:55:47.957] [INFO] default - result {
-  name: 'Fresh Aluminum Chair',
-  description: 'Savor the sweet essence in our Gloves, designed for red culinary adventures',
-  price: '31.18'
-}
-[2025-03-27T17:04:33.276] [INFO] default - result {
-  name: 'Sleek Metal Chicken',
-  description: 'The Lavern Pizza is the latest in a series of distorted products from Bashirian and Sons',
-  price: '988.91'
-}
+[2025-04-19T15:07:29.413] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T15:15:53.361] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T15:25:30.834] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T15:25:33.818] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T15:25:35.827] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T15:25:39.806] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T15:25:40.815] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T15:25:47.814] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T15:26:19.832] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T17:08:59.880] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T17:27:36.982] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T17:55:05.506] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T18:00:22.829] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T18:02:29.528] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T18:04:23.296] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T18:08:22.923] [WARN] default - Unauthorized profile update attempt
+[2025-04-19T18:08:22.925] [ERROR] default - Error updating user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.updateProfile (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:110:5)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:45
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-19T18:10:56.908] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T18:13:35.745] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T18:14:40.446] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-19T18:15:10.743] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T08:04:46.098] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T08:52:58.076] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T08:54:56.030] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T08:55:05.026] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T08:55:07.018] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T08:55:09.029] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T09:00:53.037] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T09:00:54.045] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T09:09:42.041] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:09:42.043] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:45
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-21T09:09:51.010] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:09:51.011] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:45
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-21T09:09:52.045] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:09:52.046] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:45
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-21T09:10:14.018] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:10:14.018] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:45
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-21T09:12:24.015] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:12:24.015] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:45
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-21T09:24:10.237] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:24:10.241] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:45
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-21T09:28:41.348] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:41.350] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:51.466] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:51.467] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:51.536] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:51.537] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:51.616] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:51.617] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:51.647] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:51.647] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:51.684] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:51.684] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:52.498] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:52.499] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:52.614] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:52.615] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:52.644] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:52.644] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:52.705] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:52.705] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:52.752] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:52.753] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:52.801] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:52.801] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:52.836] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:52.837] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:52.888] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:52.889] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:28:52.955] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:28:52.956] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:32:42.033] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:32:42.033] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:33:50.213] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:33:50.214] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:33:50.281] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:33:50.281] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:33:50.670] [WARN] default - Unauthorized profile access attempt
+[2025-04-21T09:33:50.671] [ERROR] default - Error retrieving user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.getProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:108:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at JwtStrategy.authenticate (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport-jwt\lib\strategy.js:96:21)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:378:16)
+[2025-04-21T09:36:53.413] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T09:44:40.611] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T09:46:40.283] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T09:46:52.374] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T09:48:51.634] [WARN] default - Unauthorized profile update attempt
+[2025-04-21T09:48:51.636] [ERROR] default - Error updating user profile: ReferenceError: UnauthorizedError is not defined
+    at UsersRouter.updateProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:117:7)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:45
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-21T09:48:58.626] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-21T09:52:09.718] [WARN] default - Unauthorized profile update attempt
+[2025-04-21T09:52:09.719] [ERROR] default - Error updating user profile: NotFoundError [NotFound Error]: You can only update your own profile
+    at UsersRouter.updateProfileUser (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:117:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:45
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)

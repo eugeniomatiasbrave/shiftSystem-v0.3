@@ -18,11 +18,12 @@ export const UserModel = db.define("users", {
   },
   email: { 
     type: DataTypes.STRING, 
-    allowNull: false, 
-    unique: true, 
+    allowNull: false,
   },
   phone: { 
-    type: DataTypes.STRING 
+    type: DataTypes.STRING,
+    allowNull: true,
+    defaultValue: null,
   },
   day_creation: { 
     type: DataTypes.DATE, 

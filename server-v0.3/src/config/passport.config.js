@@ -1,11 +1,15 @@
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
-import { Strategy as JWTStrategy, ExtractJwt } from "passport-jwt";
+import { ExtractJwt, Strategy as JWTStrategy } from "passport-jwt";
 import { usersServices } from "../services/indexRepositories.js";
 import config from "./config.env.js";
 import AuthService from "../services/AuthService.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
-const { SECRET } = config.auth.jwt;
+
+const { JWT_SECRET } = process.env; // Asegúrate de que JWT_SECRET esté definido en tu archivo .env
+const { ADMIN_EMAIL, ADMIN_PWD } = config.app;
 
 const initializePassportConfig = () => {
   passport.use(
@@ -13,27 +17,36 @@ const initializePassportConfig = () => {
     new LocalStrategy(
       { usernameField: "email", passReqToCallback: true },
       async (req, email, password, done) => {
-        const { firstName, lastName, birthDate } = req.body;
-        if (!firstName || !lastName) {
+        const { firstName, lastName, phone } = req.body;
+
+        // Validar campos obligatorios
+        if (!firstName || !lastName || !email || !password) {
           return done(null, false, { message: "Incomplete values" });
         }
-        const user = await usersServices.getUserBy({ email });
-        if (user) {
+
+        // Verificar si el usuario ya existe
+        const existingUser = await usersServices.getUserBy({ email });
+        if (existingUser) {
           return done(null, false, { message: "User already exists" });
-        }
-        let parsedDate;
-        if (birthDate) {
-          parsedDate = new Date(birthDate).toISOString();
         }
 
         const authService = new AuthService();
         const hashedPassword = await authService.hashPassword(password);
+
+        // Determinar el rol del usuario
+        let role = "user";
+        if (email === ADMIN_EMAIL && password === ADMIN_PWD) {
+          role = "admin";
+        }
+
         const newUser = {
           firstName,
           lastName,
           email,
-          birthDate: parsedDate,
+          phone: phone || null, // Opcional
+          day_creation: new Date().toISOString(), // Fecha actual
           password: hashedPassword,
+          role,
         };
         const result = await usersServices.createUser(newUser);
         return done(null, result);
@@ -46,7 +59,6 @@ const initializePassportConfig = () => {
     new LocalStrategy(
       { usernameField: "email" },
       async (email, password, done) => {
-        console.log(`Attempting to find user with email: ${email}`);
         const user = await usersServices.getUserBy({ email });
 
         console.log(`User found: ${user}`);
@@ -68,50 +80,51 @@ const initializePassportConfig = () => {
     )
   );
 
-  // Add the current strategy to the passport configuration file ,
-  // which will extract the JWT from the cookie and verify it using
-  // the secret key. If the token is valid, the user object will be returned.
-  passport.use(
-    "current",
-    new JWTStrategy(
-      {
-        jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor]),
-        secretOrKey: SECRET,
-      },
-      async (payload, done) => {
-        console.log("Estrategia- Current", payload);
+ 
+  passport.use('current', new JWTStrategy({
+    jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor]),
+    secretOrKey: JWT_SECRET
+  }, async (payload, done) => {
+    console.log("Payload recibido:", payload);
+    if (!payload) {
+      return done(null, false);
+    }
+    return done(null, payload);
+  }));
+// estrategia para headers, esta estrategia se encarga de extraer el token del header de la peticion y 
+// verificarlo con la clave secreta
+
+passport.use('Auth-Header', new JWTStrategy({
+    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+    secretOrKey: JWT_SECRET
+}, async (payload, done) => {
+    try {
         return done(null, payload);
-      }
-    )
-  );
-  // estrategia para headers, esta estrategia se encarga de extraer el token del header de la peticion y
-  // verificarlo con la clave secreta
+    } catch (error) {
+        return done(error);
+    }
+}));
 
-  passport.use(
-    "Auth-Header",
-    new JWTStrategy(
-      {
-        jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-        secretOrKey: SECRET,
-      },
-      async (payload, done) => {
-        try {
-          return done(null, payload);
-        } catch (error) {
-          return done(error);
-        }
-      }
-    )
-  );
 
-  // La forma en que se extrae el token es algo a coordinar en el equipo de desarrollo,
-  // puede venir por headers, cookies, query params, etc.
+  
 };
 
 function cookieExtractor(req) {
   if (req && req.cookies) {
-    return req.cookies["token"];
+      return req.cookies['token'];
   }
   return null;
 }
+  
+
+/*
+const extractAuthToken = (req) =>{
+  let token = null;
+  if(req.cookies){
+      token = req.cookies['token']
+  }
+  return token;
+}
+*/
+
 export default initializePassportConfig;
