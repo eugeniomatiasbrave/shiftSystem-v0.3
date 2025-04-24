@@ -1,47 +1,62 @@
-import { redirect } from '@sveltejs/kit';
-const API_URL = process.env.VITE_API_URL;
+import { fail } from '@sveltejs/kit';
+import axios from 'axios';
+
 
 export const load = async ({ locals }) => {
-    console.log('Server Load Ran')
-
-    const getUserByEmail = async () => {
-        const email = locals.user.email;
-        const response = await fetch(`${API_URL}/users/email/${email}`);
-        const data = await response.json();
-        return data;
-    };
-    
+    //console.log('Server Load Ran');
+console.log('locals:', locals.user);
     return {
-        user: await getUserByEmail(),
+       user: locals.user,
     };
-}
-    
+};
+
 export const actions = {
-    default: async ({ request }) => {
-        const formData = await request.formData();
-        const userId = formData.get('id');
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const avatar = formData.get('avatar');
+    users: async ({ request,locals }) => {
+      const formData = await request.formData();
+      const id_user = formData.get('id');
+      const firstName = formData.get('firstName');
+      const lastName = formData.get('lastName');
+      const email = formData.get('email');
+      const role = locals.user.role; // Obtener el rol del usuario desde locals.user
+  
+      // Validación de datos
+      if (!id_user || !firstName || !lastName || !email || !role) {
+        return fail(400, { error: 'Todos los campos son obligatorios' });
+      }
+   const data = {
+        firstName,
+        lastName,
+        email,
+        role
+      };
 
-        const uploaderFormData = new FormData();
-        uploaderFormData.append('name', name);
-        uploaderFormData.append('email', email);
-        uploaderFormData.append('avatar', avatar);
 
-      // console.log('AvatarFormData:', uploaderFormData); llega bien
 
-        const result = await fetch(`${API_URL}/users/${userId}`, {
-            method: 'PUT',
-            body: uploaderFormData,
-            });
-    
-            if (!result.ok) {
-                return { success: false, error: 'Error' };
+      //obtener las cookies del usuario
+      const cookies = request.headers.get('cookie');
+      console.log('Cookies:', cookies);
+
+      //enviar las cookies en los headers de la peticion
+      try {
+        const response = await axios.put(
+          `http://localhost:8080/api/users/${id_user}`,
+          data,
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${cookies}`, // Agregar el token de autorización
             }
-            
-            throw redirect(303, '/profile');
+          }
+        );
+  
+        if (response.status !== 200) {
+          return fail(response.status, { error: response.data.message || 'Error al actualizar el perfil' });
         }
+  
+        return { success: true };
+      } catch (error) {
+        console.error('Error al actualizar el perfil:', error);
+        return fail(500, { error: 'Error interno del servidor' });
+      }
     }
-
-        
+  };

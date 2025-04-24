@@ -2,6 +2,7 @@
    export let data;
    export let form;
    console.log(form)
+   
 </script>
 
 
@@ -11,7 +12,7 @@
 		<div class="mx-auto bg-base-200 p-5 rounded-lg shadow-md">
 		  <div class="hero-content text-center">
 			<div class="max-w-md">
-			  <h1 class="text-5xl font-bold">Hello {data.user.name}</h1>
+			  <h1 class="text-5xl font-bold">Hello {data.user.firstName}</h1>
 			  <p class="py-6">
 				Reserva el turno en Wellness para comenzar tu estado de bienestar integral físico, mental y emocionale . 
 				Wellness propone tratar de vivir de manera saludable y equilibrada, tomando decisiones que promuevan una mejor calidad de vida. 
@@ -28,7 +29,7 @@
 		<div class="mx-auto bg-base-200 p-5 rounded-lg shadow-md">
 		  <div class="hero-content text-center">
 			<div class="max-w-md">
-			  <h1 class="text-5xl font-bold">Hello {data.user.name}</h1>
+			  <h1 class="text-5xl font-bold">Hello {data.user.firstName}</h1>
 			  <p class="py-6">
 				Reserva el turno en Wellness para comenzar tu estado de bienestar integral físico, mental y emocionale . 
 				Wellness propone tratar de vivir de manera saludable y equilibrada, tomando decisiones que promuevan una mejor calidad de vida. 

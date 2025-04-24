@@ -1,6 +1,5 @@
 import BaseRouter from "./BaseRouter.js";
 import shiftController from "../controllers/shifts.controller.js";
-import { shiftValidator } from "../middlewares/validate.js"; // Importa el middleware de validación
 
 class ShiftsRouter extends BaseRouter {
 	
@@ -9,7 +8,7 @@ class ShiftsRouter extends BaseRouter {
         this.get('/:id_shift', ['PUBLIC','USER'], shiftController.getShiftById); /* Consultar un turno */
         this.get('/:date', ['USER'], shiftController.getShiftByDate ); /* Consultar turnos por fecha */
         this.get('/user/:id_user', ['USER'], shiftController.getShiftsByUser); /* Consultar turnos por usuario */
-        this.post('/', ['ADMIN'], shiftValidator, shiftController.createShift); /* Crear un turno */
+        this.post('/', ['ADMIN'], shiftController.createShift); /* Crear un turno */
         this.put('/:id_shift', ['ADMIN'], shiftController.updateShift); /* Actualizar turno */
         this.put('/reserve/:id_shift', ['USER'], shiftController.reserveShift); /* Reservar un turno */
         this.put('/cancel/:id_shift', ['USER'], shiftController.cancelShift); /* Cancelar un turno */

@@ -4,11 +4,8 @@ import { ExtractJwt, Strategy as JWTStrategy } from "passport-jwt";
 import { usersServices } from "../services/indexRepositories.js";
 import config from "./config.env.js";
 import AuthService from "../services/AuthService.js";
-import dotenv from 'dotenv';
-dotenv.config();
 
 
-const { JWT_SECRET } = process.env; // Asegúrate de que JWT_SECRET esté definido en tu archivo .env
 const { ADMIN_EMAIL, ADMIN_PWD } = config.app;
 
 const initializePassportConfig = () => {
@@ -56,75 +53,79 @@ const initializePassportConfig = () => {
 
   passport.use(
     "login",
-    new LocalStrategy(
-      { usernameField: "email" },
-      async (email, password, done) => {
-        const user = await usersServices.getUserBy({ email });
+    new LocalStrategy({ usernameField: "email" }, async (email, password, done) => {
+      
+      const user = await usersServices.getUserBy({ email });
+  
+      console.log(`User found: ${user}`);
+      if (!user) {
+        console.log("User not found");
+        return done(null, false, { message: "Incorrect credentials" });
+      }
+      const authService = new AuthService();
+      const isValidPassword = await authService.validatePassword(password, user.password);
+      if (!isValidPassword) {
+        console.log("Invalid password");
+        return done(null, false, { message: "Incorrect credentials" });
+      }
+      return done(null, user);
+    })
+  );
 
-        console.log(`User found: ${user}`);
-        if (!user) {
-          console.log("User not found");
-          return done(null, false, { message: "Incorrect credentials" });
+
+  const combinedExtractor = (req) => {
+    // Intentar extraer el token desde las cookies
+    let token = cookieExtractor(req);
+    if (!token) {
+      // Si no hay token en las cookies, intentar extraerlo desde los headers
+      token = customHeaderExtractor(req);
+    }
+    return token;
+  };
+  
+  passport.use(
+    "current",
+    new JWTStrategy(
+      {
+        jwtFromRequest: ExtractJwt.fromExtractors([combinedExtractor]),
+        secretOrKey: "secretoTurnero",
+      },
+      async (payload, done) => {
+        console.log("Estrategia-Unificada", payload);
+        try {
+          return done(null, payload);
+        } catch (error) {
+          return done(error);
         }
-        const authService = new AuthService();
-        const isValidPassword = await authService.validatePassword(
-          password,
-          user.password
-        );
-        if (!isValidPassword) {
-          console.log("Invalid password");
-          return done(null, false, { message: "Incorrect credentials" });
-        }
-        return done(null, user);
       }
     )
   );
-
- 
-  passport.use('current', new JWTStrategy({
-    jwtFromRequest: ExtractJwt.fromExtractors([cookieExtractor]),
-    secretOrKey: JWT_SECRET
-  }, async (payload, done) => {
-    console.log("Payload recibido:", payload);
-    if (!payload) {
-      return done(null, false);
-    }
-    return done(null, payload);
-  }));
-// estrategia para headers, esta estrategia se encarga de extraer el token del header de la peticion y 
-// verificarlo con la clave secreta
-
-passport.use('Auth-Header', new JWTStrategy({
-    jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-    secretOrKey: JWT_SECRET
-}, async (payload, done) => {
-    try {
-        return done(null, payload);
-    } catch (error) {
-        return done(error);
-    }
-}));
-
-
   
 };
 
+/*
 function cookieExtractor(req) {
   if (req && req.cookies) {
       return req.cookies['token'];
   }
   return null;
 }
-  
+  */
+const customHeaderExtractor = (req) => {
+  const authHeader = req.headers.authorization;
+  if (authHeader && authHeader.startsWith("Bearer token=")) {
+    return authHeader.replace("Bearer token=", ""); // Elimina el prefijo "Bearer token="
+  }
+  return null;
+};
 
-/*
-const extractAuthToken = (req) =>{
+const cookieExtractor = (req) =>{
   let token = null;
   if(req.cookies){
       token = req.cookies['token']
   }
   return token;
 }
-*/
+
 
 export default initializePassportConfig;

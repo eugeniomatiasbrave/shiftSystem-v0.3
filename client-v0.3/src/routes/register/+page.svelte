@@ -12,19 +12,29 @@
 	let password = "";
 	let confirmPassword = "";
 	let passwordMatch = true;
-	let name = "";
+	let firstName = "";
+    let lastName = "";
 	let email = "";
-	let hasNumber = false;
+	let hasNumberInFirstName = false;
+    let hasNumberInLastName = false;
 	let isFormValid = false;
 
 	//Con estas validaciones controlo que el formulario no se envie si no esta completo
-	$: {
-		if (password && confirmPassword) {
-			passwordMatch = password === confirmPassword;
-		}
-		hasNumber = /\d/.test(name);
-		isFormValid = name !== "" && email !== "" && passwordMatch === true && hasNumber === false;
-	  }
+	 // Actualizamos las validaciones para incluir firstName y lastName
+	 $: {
+        if (password && confirmPassword) {
+            passwordMatch = password === confirmPassword;
+        }
+        hasNumberInFirstName = /\d/.test(firstName);
+        hasNumberInLastName = /\d/.test(lastName);
+        isFormValid =
+            firstName !== "" &&
+            lastName !== "" &&
+            email !== "" &&
+            passwordMatch === true &&
+            !hasNumberInFirstName &&
+            !hasNumberInLastName;
+    }
 	  
 </script>
 
@@ -66,7 +76,7 @@
 							type="email"
 							id="email"
 							name="email"
-							placeholder="mail@mail.com"
+							placeholder="Email@mail.com"
 							class="input input-bordered"
 							required
 						/>
@@ -74,15 +84,15 @@
 							<p class="error">Este campo es obligatorio</p>
 						{/if}
 					</div>
-					<div class="form-control">
-						<label class="label" for="nombre">
+					<div class="form-control"> <!--firstName-->
+						<label class="label" for="firstName">
 							<span class="label-text">Nombre 👤</span>
 						</label>
 						<input
-							bind:value={name}
+							bind:value={firstName}
 							type="text"
-							id="nombre"
-							name="name"
+							id="firstName"
+							name="firstName"
 							placeholder="Nombre"
 							class="input input-bordered"
 							required
@@ -90,8 +100,28 @@
 						{#if form?.missing}
 							<p class="text-xs text-error">Este campo es obligatorio</p>
 						{/if}
-						{#if hasNumber}
+						{#if hasNumberInFirstName}
 							<p class="text-xs text-error">El nombre no debe contener números</p>
+						{/if}
+					</div>
+					<div class="form-control"> <!--lastName-->
+						<label class="label" for="lastName">
+							<span class="label-text">Apellido 👤</span>
+						</label>
+						<input
+							bind:value={lastName}
+							type="text"
+							id="lastName"
+							name="lastName"
+							placeholder="Apellido"
+							class="input input-bordered"
+							required
+						/>
+						{#if form?.missing}
+							<p class="text-xs text-error">Este campo es obligatorio</p>
+						{/if}
+						{#if hasNumberInLastName}
+							<p class="text-xs text-error">El apellido no debe contener números</p>
 						{/if}
 					</div>
 					<div class="form-control">
@@ -117,7 +147,7 @@
 							type="password"
 							id="passwordConfirm"
 							name="passwordConfirm"
-							placeholder="Password"
+							placeholder="Confirmar Password"
 							class="input input-bordered"
 							required
 						/>

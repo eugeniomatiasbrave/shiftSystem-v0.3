@@ -1,3 +1,5 @@
+
+/*
 import Joi from "joi";
 
 const registerSchema = Joi.object({
@@ -47,3 +49,5 @@ export const shiftValidator = (req, res, next) => {
   }
   next();
 };
+
+*/

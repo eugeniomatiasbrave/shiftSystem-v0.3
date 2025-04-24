@@ -33,7 +33,7 @@ const getUserById = async (req, res, next) => {
 
 const getUserByEmail = async (req, res, next) => {
   try {
-    const email = await usersServices.getUserBy({ email: req.params.email }); // Obtiene el email de los parámetros de la URL
+    const email = await usersServices.getUserByEmail(req.params.email);
     if (!email) {
       logger.warn(`User with email ${req.params.email} not found`);
       throw new NotFoundError("User not found"); //
@@ -66,7 +66,7 @@ const createUser = async (req, res, next) => {
       firstName,
       lastName,
       email,
-      phone,
+      phone: phone || null,
       day_creation: day_creation || new Date().toISOString(),
       password,
       role: role || "user",
@@ -96,40 +96,23 @@ const deleteUser = async (req, res, next) => {
 };
 
 
-const updateProfileUser = async (req, res, next) => {
-  try { 
-    const { id_user } = req.params; // Obtiene el id_user de los parámetros de la URL
-    console.log("Param-id_user", id_user);
-    
-    //const userId = req.user.id_user; // Obtiene el id_user del usuario autenticado
-    //console.log("UserId de Sesion", userId);
-    
-    const { firstName, lastName, email} = req.body; // Obtiene los datos del body de la peticion
-    console.log("Body-de-Perfil", req.body);
+const updateUser = async (req, res, next) => {
+  try {
+    const id_user = parseInt(req.params.id_user, 10);
+    const updatedData = req.body;
 
-    if (!id_user || !firstName || !lastName || !email) {
-      logger.warn("Incomplete profile update data");
-      throw new BadRequestError("All fields are required");
-    }
-
-    //if (userId !== id_user) {
-    //  logger.warn("Unauthorized profile update attempt");
-    //  throw new NotFoundError("You can only update your own profile");
-    //}
-/*
+    // Verificar si el usuario existe
     const user = await usersServices.getUserBy({ id_user });
     if (!user) {
-      logger.warn(`User with id_user ${id_user} not found`);
-      throw new NotFoundError("User not found"); // Pasa el error al manejador de errores
+      throw new NotFoundError("User not found");
     }
-*/
-    const userData = {firstName,lastName,email};
-    const result = await usersServices.updateUser(id_user, userData); // Llama al servicio para actualizar el usuario
 
-    HttpRes.Success(res, result); // Usa el método Success de la clase HttpRes para enviar la respuesta
+    // Actualizar los datos del usuario
+    const updatedUser = await usersServices.updateUser(id_user, updatedData);
+    HttpRes.Updated(res, updatedUser);
   } catch (error) {
-    logger.error("Error updating user profile:", error);
-    next(error); // Pasa el error al manejador de errores
+    logger.error("Error updating user:", error);
+    next(error);
   }
 };
 
@@ -141,6 +124,6 @@ export default {
   getUserByEmail,
   createUser,
   deleteUser,
-  updateProfileUser,
+  updateUser,
  // updatePassword,
 };

@@ -35,7 +35,7 @@ export const actions = {
                     : null;
 
                 if (token) {
-                    cookies.set('AuthorizationToken', token, {
+                    cookies.set('token', token, {
                         httpOnly: true,
                         path: '/',
                         secure: true,

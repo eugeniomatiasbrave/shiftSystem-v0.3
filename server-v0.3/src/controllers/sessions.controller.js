@@ -1,12 +1,7 @@
 import jwt from "jsonwebtoken";
 import logger from "../config/log4js.config.js";
 import HttpRes from "../utils/httpResponse.js";
-import { UnauthorizedError } from "../utils/customError.js";
-import dotenv from 'dotenv';
-dotenv.config();
 
-
-const { JWT_SECRET } = process.env; // Asegúrate de que JWT_SECRET esté definido en tu archivo .env
 
 const register = (req, res, next) => {
   try {
@@ -19,34 +14,40 @@ const register = (req, res, next) => {
 
 const login = async (req, res, next) => {
   try {
-      const user = req.user;
-      const tokenPayload = {
-          id_user: user.id_user,
-          firstName: user.firstName,
-          lastName: user.lastName,
-          email: user.email,
-          role: user.role,
-      };
-      const token = jwt.sign(tokenPayload, JWT_SECRET, { expiresIn: "1d" });
-      res.cookie("token", token).send({ status: "success", message: "logged in" });
+    const user = req.user; // Obtiene el usuario autenticado desde el middleware de Passport
+
+    if (!user) {
+      return res.status(401).send({ status: "error", message: "Invalid credentials" });
+    }
+    console.log("User-cookie: found", user);
+
+    const tokenPayload = {
+      id_user: user.id_user,
+      email: user.email,
+      firstName: user.firstName,
+      lastName: user.lastName,
+      role: user.role,
+    };
+
+    const token = jwt.sign(tokenPayload, "secretoTurnero", { expiresIn: "1d" });
+    console.log("Token-login", token);
+    res.cookie("token", token, {
+        httpOnly: true,
+        secure: false,
+        maxAge: 24 * 60 * 60 * 1000,
+      }).send({ status: "success", message: "Logged in", payload: user });
+
   } catch (error) {
-      logger.error("Error logging in user:", error);
-      next(error);
+    logger.error("Error logging in user:", error);
+    next(error);
   }
 };
 
-const current = async (req, res, next) => {
-  try {
-    const user = req.user;
-    if (!user) {
-      logger.warn("Unauthorized access attempt");
-      throw new UnauthorizedError("Unauthorized access"); // Pasa el error al manejador de errores
-    }
-    HttpRes.Success(res, user, "Current user retrieved"); // Envía el usuario actual en la respuesta
-  } catch (error) {
-    logger.error("Error retrieving current user:", error);
-    next(error); // Pasa el error al manejador de errores
-  }
+const current = async (req, res) => {
+  if(!req.user){
+    return res.status(401).send({status:"error",error:"Not logged in"});
+}
+res.send(req.user);
 };
 
 const logout = async (req, res, next) => {

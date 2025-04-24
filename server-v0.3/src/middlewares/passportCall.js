@@ -1,10 +1,9 @@
 import passport from "passport";
 
 export const passportCall = (strategy) => {
-  console.log("Estrategia", strategy);
   return async (req, res, next) => {
     passport.authenticate(strategy, function (error, user, info) {
-      console.log("User-passportCall", user);
+      console.log("Token recibido:", req.headers.authorization);
       if (error) return next(error);
       if (!user) {
         req.user = null;

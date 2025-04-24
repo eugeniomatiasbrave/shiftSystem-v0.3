@@ -2,11 +2,11 @@ import { redirect } from '@sveltejs/kit';
 import jwt from 'jsonwebtoken';
 
 export const handle = async ({ event, resolve }) => {
-    const token = event.cookies.get('AuthorizationToken');
+    const token = event.cookies.get('token');
 
     if (event.route.id && event.route.id.includes('auth')) {
         if (!token) {
-            event.cookies.delete('AuthorizationToken', { path: '/' }); 
+            event.cookies.delete('token', { path: '/' }); 
             throw redirect(303, '/');
         }
     }
