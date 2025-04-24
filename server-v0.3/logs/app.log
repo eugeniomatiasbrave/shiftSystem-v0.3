@@ -366,3 +366,172 @@
     at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:14:7
     at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
     at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-24T17:24:52.610] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:24:52.611] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:26:18.023] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:26:18.024] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:26:27.039] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:26:27.039] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:26:40.939] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:26:40.940] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:26:54.604] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:26:54.604] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:27:02.040] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:27:02.040] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:27:07.989] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:27:07.990] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:27:09.702] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:27:09.703] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:27:13.147] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:27:13.147] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:27:21.968] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:27:21.968] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:29:10.059] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:29:10.061] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:29:11.551] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:29:11.551] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:29:24.082] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:29:24.083] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:31:10.625] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:31:10.626] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:31:28.615] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:31:28.615] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:31:32.247] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:31:32.247] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:31:33.223] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:31:33.224] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:42:34.313] [WARN] default - Invalid id_user: eugeniomatiasbrave@gmail.com
+[2025-04-24T17:42:34.314] [ERROR] default - Error retrieving user by id_user: BadRequestError [BadRequest Error]: Invalid user ID
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:27:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:46
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:13:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-24T17:42:36.318] [WARN] default - Invalid id_user: eugeniomatiasbrave@gmail.com
+[2025-04-24T17:42:36.318] [ERROR] default - Error retrieving user by id_user: BadRequestError [BadRequest Error]: Invalid user ID
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:27:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:20
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/policies.js:3:46
+    at Layer.handle [as handle_request] (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\express\lib\router\route.js:149:13)
+    at file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/middlewares/passportCall.js:13:7
+    at allFailed (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:110:18)
+    at attempt (C:\Users\eugen\OneDrive\Desktop\Proyectos-EB\Shift-v0.3\server-v0.3\node_modules\passport\lib\middleware\authenticate.js:183:28)
+[2025-04-24T17:44:31.047] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:44:31.050] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:44:34.715] [WARN] default - User with id_user eugeniomatiasbrave@gmail.com not found
+[2025-04-24T17:44:34.715] [ERROR] default - Error retrieving user by id_user: NotFoundError [NotFound Error]: User not found
+    at UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:25:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:46:17.559] [ERROR] default - Error retrieving user by id_user: Error: Failed to get user
+    at UserDao.getOne (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/dao/mySql/userDao.js:18:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UsersRepository.getUserBy (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/services/repositories/UsersRepository.js:11:12)
+    at async UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:22:18)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:46:19.925] [ERROR] default - Error retrieving user by id_user: Error: Failed to get user
+    at UserDao.getOne (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/dao/mySql/userDao.js:18:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UsersRepository.getUserBy (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/services/repositories/UsersRepository.js:11:12)
+    at async UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:22:18)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:47:31.651] [ERROR] default - Error retrieving user by id_user: Error: Failed to get user
+    at UserDao.getOne (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/dao/mySql/userDao.js:18:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UsersRepository.getUserBy (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/services/repositories/UsersRepository.js:11:12)
+    at async UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:23:18)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:47:33.975] [ERROR] default - Error retrieving user by id_user: Error: Failed to get user
+    at UserDao.getOne (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/dao/mySql/userDao.js:18:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UsersRepository.getUserBy (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/services/repositories/UsersRepository.js:11:12)
+    at async UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:23:18)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:47:35.640] [ERROR] default - Error retrieving user by id_user: Error: Failed to get user
+    at UserDao.getOne (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/dao/mySql/userDao.js:18:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UsersRepository.getUserBy (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/services/repositories/UsersRepository.js:11:12)
+    at async UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:23:18)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:47:58.951] [ERROR] default - Error retrieving user by id_user: Error: Failed to get user
+    at UserDao.getOne (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/dao/mySql/userDao.js:18:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UsersRepository.getUserBy (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/services/repositories/UsersRepository.js:11:12)
+    at async UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:23:18)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:49:15.054] [ERROR] default - Error retrieving user by id_user: Error: Failed to get user
+    at UserDao.getOne (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/dao/mySql/userDao.js:18:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UsersRepository.getUserBy (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/services/repositories/UsersRepository.js:11:12)
+    at async UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:23:18)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:49:17.825] [ERROR] default - Error retrieving user by id_user: Error: Failed to get user
+    at UserDao.getOne (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/dao/mySql/userDao.js:18:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async UsersRepository.getUserBy (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/services/repositories/UsersRepository.js:11:12)
+    at async UsersRouter.getUserById (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/users.controller.js:23:18)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:43:5
+[2025-04-24T17:55:17.839] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-04-24T17:55:29.546] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully

@@ -3,12 +3,19 @@ import axios from 'axios';
 
 
 export const load = async ({ locals }) => {
-    //console.log('Server Load Ran');
-console.log('locals:', locals.user);
-    return {
-       user: locals.user,
+    console.log('Server Load Ran')
+
+    const getUserByEmail = async () => {
+        const email = locals.user.email;
+        const response = await fetch(`http://localhost:8080/api/users/email/${email}`);
+        const data = await response.json();
+        return data;
     };
-};
+    
+    return {
+        user: await getUserByEmail(),
+    };
+}
 
 export const actions = {
     users: async ({ request,locals }) => {
@@ -53,7 +60,9 @@ export const actions = {
           return fail(response.status, { error: response.data.message || 'Error al actualizar el perfil' });
         }
   
-        return { success: true };
+        return { 
+          success: true,
+          updatedUser: response.data };
       } catch (error) {
         console.error('Error al actualizar el perfil:', error);
         return fail(500, { error: 'Error interno del servidor' });

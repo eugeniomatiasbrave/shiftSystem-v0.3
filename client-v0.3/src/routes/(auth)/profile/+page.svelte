@@ -2,14 +2,15 @@
     export let data;
     const { user } = data;
     
+  
     
-    let id = user.id_user;
-    let firstName = user.firstName;
-    let lastName = user.lastName;
-    let email = user.email;
   
     let errorMessage = '';
 
+ // Escucha el resultado de la acción
+ 
+
+ 
 
 
     
@@ -22,7 +23,7 @@
       <h2 class="text-2xl font-bold mb-6">Actualización del perfil</h2>
   
       <form method="POST" class="flex flex-col gap-4" action="?/users" >
-        <input type="hidden" name="id" value={id} />
+        <input type="hidden" name="id" value={user.data.id_user} />
         <div class="flex flex-col lg:flex-row items-center lg:items-start">
           <div class="flex-grow w-full">
             <div class="form-control mb-4">
@@ -31,10 +32,10 @@
               </label>
               <input
                 type="email"
-                bind:value={email}
+                bind:value={user.data.email}
                 id="email"
                 name="email"
-                placeholder="mail@mail.com"
+                placeholder="Email"
                 class="input input-bordered w-full"
                 required
               />
@@ -45,7 +46,7 @@
               </label>
               <input
                 type="text"
-                bind:value={firstName}
+                bind:value={user.data.firstName}
                 id="firstName"
                 name="firstName"
                 placeholder="Nombre"
@@ -59,7 +60,7 @@
               </label>
               <input
                 type="text"
-                bind:value={lastName}
+                bind:value={user.data.lastName}
                 id="lastName"
                 name="lastName"
                 placeholder="Apellido"

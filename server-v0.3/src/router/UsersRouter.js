@@ -8,7 +8,7 @@ class UsersRouter extends BaseRouter { // creo una clase llamada UsersRouter que
     init() {
         this.get('/', ['PUBLIC'], usersController.getUsers); /* Consultar todos los usuarios */
         this.get('/:id_user', ['PUBLIC'], usersController.getUserById); /* Consultar usuario */
-        this.get('/:email', ['PUBLIC'], usersController.getUserByEmail); /* Consultar usuario por email */
+        this.get('/email/:email', ['PUBLIC'], usersController.getUserByEmail); /* Consultar usuario por email */
         this.post('/', ['PUBLIC'], usersController.createUser); /* Crear usuario */
         this.put('/:id_user', ['USER'] ,passportCall('current'),usersController.updateUser); // Ruta para actualizar el perfil
         this.delete('/:id_user', ['ADMIN'], usersController.deleteUser); /* Eliminar usuario */
