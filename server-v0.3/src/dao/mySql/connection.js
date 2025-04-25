@@ -18,11 +18,11 @@ const db = new Sequelize( DATABASE, USER, PASSWORD, {
 
   export const initMySql = async () => {
     try {
-        await createDatabase();
-        await db.sync({ force: false });
-        console.log('Conectado a la base de datos MySQL');
+      await createDatabase(); // Asegúrate de que la base de datos exista
+      await db.authenticate(); // Verifica la conexión
+      console.log("Conexión a la base de datos MySQL exitosa.");
     } catch (error) {
-        console.log(error);
+      console.error("Error al conectar con la base de datos:", error);
     }
 };
 

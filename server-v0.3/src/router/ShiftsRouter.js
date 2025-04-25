@@ -1,13 +1,14 @@
 import BaseRouter from "./BaseRouter.js";
 import shiftController from "../controllers/shifts.controller.js";
+import {passportCall} from "../middlewares/passportCall.js"; 
 
 class ShiftsRouter extends BaseRouter {
 	
 	init(){
-		this.get('/', ['PUBLIC','USER'], shiftController.getShifts); /* Consultar todos los turnos */
-        this.get('/:id_shift', ['PUBLIC','USER'], shiftController.getShiftById); /* Consultar un turno */
-        this.get('/:date', ['USER'], shiftController.getShiftByDate ); /* Consultar turnos por fecha */
-        this.get('/user/:id_user', ['USER'], shiftController.getShiftsByUser); /* Consultar turnos por usuario */
+		this.get('/',['PUBLIC','USER'], passportCall('current'),shiftController.getShifts); /* Consultar todos los turnos */
+        this.get('/:id_shift',['PUBLIC','USER'], passportCall('current'),shiftController.getShiftById); /* Consultar un turno */
+        this.get('/:date', ['PUBLIC','USER'], passportCall('current'),shiftController.getShiftByDate ); /* Consultar turnos por fecha */
+        this.get('/user/:id_user',['PUBLIC','USER'], passportCall('current'),shiftController.getShiftsByUser); /* Consultar turnos por usuario */
         this.post('/', ['ADMIN'], shiftController.createShift); /* Crear un turno */
         this.put('/:id_shift', ['ADMIN'], shiftController.updateShift); /* Actualizar turno */
         this.put('/reserve/:id_shift', ['USER'], shiftController.reserveShift); /* Reservar un turno */

@@ -5,8 +5,8 @@ const { shifts } = data;
 console.log(shifts);
 
 let selectedDate = '';
-let filteredShifts = [];
-let newStatus = 'Reserved'; // Estado por defecto al reservar
+let filteredShifts = []; // Inicializa el array filtrado
+let newStatus = 'reserved'; // Estado por defecto al reservar
 
 // Función para obtener la fecha actual en formato YYYY-MM-DD
 function getCurrentDate() {
@@ -16,16 +16,20 @@ function getCurrentDate() {
 
 
 function filterShiftsByDate(date) {
-    filteredShifts = shifts.filter(shift => {
-      const shiftDate = new Date(shift.date).toISOString().split('T')[0];
-      return shiftDate === date && shift.status === 'Vacant'; // filtro tambien por estado 'Vacant'
-    });
+    if (!Array.isArray(shifts.data)) {
+        console.error('shifts is not an array:', shifts);
+        return;
+    }
+
+    filteredShifts = shifts.data.reduce((acc, shift) => {
+        const shiftDate = new Date(shift.date).toISOString().split('T')[0];
+        if (shiftDate === date && shift.status === 'available') {
+            acc.push(shift);
+        }
+        return acc;
+    }, []);
 }
 
-function formatDate(dateString) {
-    const [year, month, day] = dateString.split('T')[0].split('-');
-    return `${day}/${month}/${year}`;
-}
 
   // Al cargar el componente, filtrar los turnos por la fecha actual
 $: {
@@ -42,9 +46,9 @@ function handleDateChange(event) {
 
 function handleCheckboxChange(event, shift) {
     if (event.target.checked) {
-      shift.status = 'Reserved';
+      shift.status = 'reserved';
     } else {
-      shift.status = 'Vacant';
+      shift.status = 'available';
     }
 }
 </script>
@@ -60,33 +64,23 @@ function handleCheckboxChange(event, shift) {
     <thead class="text-center">
       <tr>
         <th>Select</th>
-        <th>Id</th>
-        <th>User Id</th>
+        <th>Shift ID</th>
         <th>Date</th>
-        <th>Day Of Week</th>
-        <th>Hour</th>
-        <th>Duration</th>
+        <th>Time</th>
         <th>Status</th>
-        <th>Description</th>
-        <th>Price</th>
       </tr>
     </thead>
     <tbody class="text-center">
-      {#each filteredShifts as shift} 
+      {#each filteredShifts as shift}
         <tr class="hover">
           <td>
-            <input type="checkbox" class="checkbox checkbox-sm" on:change={(event) => handleCheckboxChange(event, shift)}/>
+            <input type="checkbox" class="checkbox checkbox-sm" on:change={(event) => handleCheckboxChange(event, shift)} />
           </td>
-          <td>{shift._id}</td>
-          <input type="hidden" name="sid" value={shift._id}>
-          <td>{shift.userId}</td>
-          <td>{formatDate(shift.date)}</td>
-          <td>{shift.dayOfWeek}</td>
-          <td>{shift.hour}</td>         
-          <td>{shift.duration}</td>
+          <td>{shift.id_shift}</td>
+          <input type="hidden" name="sid" value={shift.id_shift}>
+          <td>{shift.date}</td>
+          <td>{shift.time}</td>
           <td>{shift.status}</td>
-          <td>{shift.description}</td>
-          <td>{shift.price}</td>
         </tr>
       {/each}
     </tbody>
