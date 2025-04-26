@@ -1,4 +1,5 @@
 import { fail } from "@sveltejs/kit";
+import axios from 'axios';
 const API_URL = process.env.VITE_API_URL;
 
 export const load = async () => {
@@ -13,38 +14,44 @@ export const load = async () => {
     };
 };
 
+//obtener las cookies del usuario
 
 export const actions = {
-    default: async ({ request, locals }) => {
+    reserve: async ({ request, locals }) => {
         const formData = await request.formData();
-        const userId = locals.user._id; // Obtener el ID del usuario desde `locals`
-        const sid = formData.get("sid");
+        const id_user = locals.user.id_user; // Obtener el ID del usuario desde `locals`
+        const id_shift = formData.get("id");
         const status = formData.get("status");
 
-        const body = { userId, sid, status };
+        const body = { id_user, id_shift, status };
         console.log("body:", body);
        
         // Crear el turno y agregarlo al usuario
-        const shiftRes = await fetch(`${API_URL}/shifts/${sid}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(body),
-        });
+        const cookies = request.headers.get('cookie');
+        console.log('Cookies:', cookies);
 
-        if (shiftRes.status !== 200) {
-            const resBody = await shiftRes.json();
-            return fail(shiftRes.status, resBody);
-        }
+        try {
+        const response = await axios.put(
+            `http://localhost:8080/api/shifts/reserve/${id_shift}`,
+            body,
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${cookies}`, // Agregar el token de autorización
+                }
+            });
        
-		const resBody = await shiftRes.json();
-
-        console.log("resBody client:", resBody);
-	
-        return {
-           status: 200,
-           body: { message: "Register successful", data: resBody }
-	    };
-}
+		if (response.status !== 200) {
+            return fail(response.status, { error: response.data.message || 'Error al actualizar el perfil' });
+          }
+    
+          return { 
+            success: true,
+            updatedUser: response.data };
+        }
+        catch (error) {
+            console.error("Error reservando el turno:", error);
+            return fail(500, { error: 'Error reservando el turno' });
+        }
+    }
 };

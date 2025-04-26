@@ -1,5 +1,9 @@
 <script>
+import { onMount } from "svelte";
 import BackButton from "$lib/components/BackButton.svelte";
+import flatpickr from "flatpickr";
+import "flatpickr/dist/flatpickr.min.css"; // Importa los estilos de Flatpickr
+
 export let data;
 const { shifts } = data;
 console.log(shifts);
@@ -28,10 +32,10 @@ function filterShiftsByDate(date) {
         }
         return acc;
     }, []);
+
+
 }
 
-
-  // Al cargar el componente, filtrar los turnos por la fecha actual
 $: {
     const currentDate = getCurrentDate();
     selectedDate = currentDate; // Establecer la fecha actual como valor por defecto
@@ -48,23 +52,36 @@ function handleCheckboxChange(event, shift) {
     if (event.target.checked) {
       shift.status = 'reserved';
     } else {
-      shift.status = 'available';
+        // Si se deselecciona el checkbox, se restablece el estado a 'available'
+        shift.status = 'available';
     }
 }
+
+// Inicializar Flatpickr
+let calendar;
+onMount(() => {
+    calendar = flatpickr("#calendar", {
+        dateFormat: "Y-m-d",
+        defaultDate: new Date(),
+        onChange: (selectedDates) => {
+            selectedDate = selectedDates[0].toISOString().split('T')[0];
+            filterShiftsByDate(selectedDate);
+        },
+    });
+});
 </script>
 
 <h1 class="my-4 text-4xl font-bold text-center text-white">Page Shift</h1>
 <div class="mx-auto bg-white p-5 rounded-lg shadow-md">
 <BackButton></BackButton>
-<form method="POST" class="mt-3">
-<input type="date" bind:value={selectedDate} on:change={handleDateChange} class="input input-bordered">
-<h1 class="text-3xl font-bold text-center">Available shifts</h1>
+<form method="POST"  action="?/reserve" class="mt-3">
+  <input id="calendar" type="text" bind:value={selectedDate} on:change={handleDateChange} class="input input-bordered" />
+<h1 class="text-3xl font-bold text-center">TURNOS DISPONIBLES</h1>
 <div class="mx-auto bg-white p-2 my-2 rounded-lg shadow-md">
   <table class="table w-full">
     <thead class="text-center">
       <tr>
         <th>Select</th>
-        <th>Shift ID</th>
         <th>Date</th>
         <th>Time</th>
         <th>Status</th>
@@ -74,10 +91,9 @@ function handleCheckboxChange(event, shift) {
       {#each filteredShifts as shift}
         <tr class="hover">
           <td>
-            <input type="checkbox" class="checkbox checkbox-sm" on:change={(event) => handleCheckboxChange(event, shift)} />
+            <input type="checkbox" class="checkbox checkbox-sm" on:change={(event) => handleCheckboxChange(event,shift)} />
           </td>
-          <td>{shift.id_shift}</td>
-          <input type="hidden" name="sid" value={shift.id_shift}>
+          <input type="hidden" name="id" value={shift.id_shift}>
           <td>{shift.date}</td>
           <td>{shift.time}</td>
           <td>{shift.status}</td>
