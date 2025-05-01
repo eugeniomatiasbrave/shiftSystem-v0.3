@@ -6,11 +6,14 @@ import {passportCall} from "../middlewares/passportCall.js"; // Importo passport
 class UsersRouter extends BaseRouter { // creo una clase llamada UsersRouter que extiende de BaseRouter
 
     init() {
+        
         this.get('/', ['PUBLIC'], usersController.getUsers); /* Consultar todos los usuarios */
-        this.get('/:id_user', ['PUBLIC'], usersController.getUserById); /* Consultar usuario */
+        //api/users/email/${email}
         this.get('/email/:email', ['PUBLIC'], usersController.getUserByEmail); /* Consultar usuario por email */
-        this.post('/', ['PUBLIC'], usersController.createUser); /* Crear usuario */
+        // /api/users/${id_user}
         this.put('/:id_user', ['USER'] ,passportCall('current'),usersController.updateUser); // Ruta para actualizar el perfil
+        this.get('/:id_user', ['PUBLIC'], usersController.getUserById); /* Consultar usuario */
+        this.post('/', ['PUBLIC'], usersController.createUser); /* Crear usuario */
         this.delete('/:id_user', ['ADMIN'], usersController.deleteUser); /* Eliminar usuario */
        // this.put('/:id_user/password', ['USER', 'ADMIN'], usersController.updatePassword); /* Cambiar contraseña */
     }
