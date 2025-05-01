@@ -1,4 +1,5 @@
 import { error, fail } from '@sveltejs/kit';
+import axios from 'axios';
 const API_URL = process.env.VITE_API_URL;
 
 export const actions = {
@@ -21,17 +22,15 @@ export const actions = {
         }
 
         try {
-            const res = await fetch(`${API_URL}/sessions/login`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(body)
+            const response = await axios.post(`${API_URL}/sessions/login`, body, {
+                headers: { 'Content-Type': 'application/json' }
             });
 
-            if (res.status === 200) {
+            if (response.status === 200) {
                 // Obtener el token de la cookie
-                const setCookieHeader = res.headers.get('set-cookie');
+                const setCookieHeader = response.headers['set-cookie'];
                 const token = setCookieHeader
-                    ? setCookieHeader.split(';')[0].split('=')[1]
+                    ? setCookieHeader[0].split(';')[0].split('=')[1]
                     : null;
 
                 if (token) {
@@ -43,21 +42,22 @@ export const actions = {
                         maxAge: 60 * 60 * 24 // 1 day
                     });
 
-					return { success: true };
+                    return { success: true };
 
                 } else {
                     return fail(500, { message: 'Token no encontrado en la respuesta' });
                 }
             } else {
-                const errorData = await res.json();
-                return fail(res.status, { message: errorData.message || 'Datos de acceso incorrectos' });
+                return fail(response.status, { message: response.data.message || 'Datos de acceso incorrectos' });
             }
         } catch (err) {
             console.error('Error: ', err);
+            if (err.response) {
+                return fail(err.response.status, { message: err.response.data.message || 'Datos de acceso incorrectos' });
+            }
             return error(500, 'Something went wrong logging in');
         }
     }
-	
 };
 
 // Función para validar el formato del correo electrónico
