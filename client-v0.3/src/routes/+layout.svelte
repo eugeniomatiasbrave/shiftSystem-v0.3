@@ -4,6 +4,12 @@
 
 	export let data;
 
+  let isOpen = false;
+  
+  function toggleMenu() {
+    isOpen = !isOpen;
+  }
+
 	const confirmLogout = (event) => {
         event.preventDefault();
         Swal.fire({
@@ -24,52 +30,96 @@
 
 </script>
 
-
-<nav class="navbar bg-base-100 border-b">
-    <div class="flex-1">
-      <a href="/" class="btn btn-ghost normal-case text-2xl text-info font-bold">Wellness</a>
+<header class="bg-white py-4 px-6 md:px-12 shadow-sm">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <div class="flex items-center">
+      <a href="/" class="flex items-center">
+        <div class="w-10 h-10 bg-purple-600 rounded-md flex items-center justify-center mr-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+        </div>
+        <span class="text-2xl font-bold text-gray-800">Turnero</span>
+      </a>
     </div>
-    <div class="flex-none">
-      <ul class="menu menu-horizontal">
-       
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center space-x-8">
+      <a href="/" class="text-gray-700 hover:text-purple-600 transition-colors">Home</a>
       {#if data.user}
-     
         {#if data.user.role === 'admin'}
-		   
-				      <li>
-					     <a href="/users" class="btn-ghost text-info font-bold">Patients</a>
-				       </li>
-               <li>
-                <a href="/adminShifts" class="btn-ghost text-info font-bold">AdminShifts</a>
-                </li>
-                  <li> 
-                    <a href="/dashboard" class="btn-ghost text-info font-bold">Dashboard</a>
-                  </li>
-                  <form method="POST" action="/logout" class="btn btn-ghost text-info font-bold" on:submit={confirmLogout}>
-                    <button type='submit'>Logout</button>
-                  </form>
+          <a href="/users" class="text-gray-700 hover:text-purple-600 transition-colors">Patients</a>
+          <a href="/adminShifts" class="text-gray-700 hover:text-purple-600 transition-colors">AdminShifts</a>
+          <a href="/dashboard" class="text-gray-700 hover:text-purple-600 transition-colors">Dashboard</a>
+          <form method="POST" action="/logout" on:submit={confirmLogout}>
+            <button type="submit" class="text-gray-700 hover:text-purple-600 transition-colors">Logout</button>
+          </form>
         {:else}
-                  <li>
-                    <a href="/shifts" class="btn btn-ghost text-info font-bold">Shift</a>
-                  </li>
-                  <li>
-                    <a href="/shifts/myShifts" class="btn btn-ghost text-info font-bold">My Shifts</a>
-                  </li>
-                  <li> 
-                    <a href="/profile" class=" btn btn-ghost text-info font-bold">Profile</a>
-                  </li>
-                  <form method="POST" action="/logout" class="btn btn-ghost text-info font-bold" on:submit={confirmLogout}>
-                    <button type='submit'>Logout</button>
-                  </form>
+          <a href="/shifts" class="text-gray-700 hover:text-purple-600 transition-colors">Shift</a>
+          <a href="/shifts/myShifts" class="text-gray-700 hover:text-purple-600 transition-colors">My Shifts</a>
+          <a href="/profile" class="text-gray-700 hover:text-purple-600 transition-colors">Profile</a>
+          <form method="POST" action="/logout" on:submit={confirmLogout}>
+            <button type="submit" class="text-gray-700 hover:text-purple-600 transition-colors">Logout</button>
+          </form>
         {/if}
       {:else}
-        <li><a href="/info" class="btn btn-ghost text-info font-bold">Info</a></li>
-        <li><a href="/contact" class="btn btn-ghost text-info font-bold">Contact</a></li>
-        <li><a href="/login" class="btn btn-ghost text-info font-bold">Login</a></li>
+        <a href="/info" class="text-gray-700 hover:text-purple-600 transition-colors">Info</a>
+        <a href="/contact" class="text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
       {/if}
-      </ul>
+    </nav>
+
+    <div class="hidden md:flex items-center space-x-4">
+      {#if data.user}
+        <form method="POST" action="/logout" on:submit={confirmLogout}>
+          <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors">
+            Logout
+          </button>
+        </form>
+      {:else}
+        <a href="/login" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors">
+          Log in
+        </a>
+      {/if}
     </div>
-</nav>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden text-gray-700" on:click={toggleMenu}>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  {#if isOpen}
+    <div class="md:hidden mt-4 pt-4 border-t border-gray-200">
+      <nav class="flex flex-col space-y-4 px-2">
+        <a href="/" class="text-gray-700 hover:text-purple-600 transition-colors">Home</a>
+        {#if data.user}
+          {#if data.user.role === 'admin'}
+            <a href="/users" class="text-gray-700 hover:text-purple-600 transition-colors">Patients</a>
+            <a href="/adminShifts" class="text-gray-700 hover:text-purple-600 transition-colors">AdminShifts</a>
+            <a href="/dashboard" class="text-gray-700 hover:text-purple-600 transition-colors">Dashboard</a>
+            <form method="POST" action="/logout" on:submit={confirmLogout}>
+              <button type="submit" class="text-gray-700 hover:text-purple-600 transition-colors">Logout</button>
+            </form>
+          {:else}
+            <a href="/shifts" class="text-gray-700 hover:text-purple-600 transition-colors">Shift</a>
+            <a href="/shifts/myShifts" class="text-gray-700 hover:text-purple-600 transition-colors">My Shifts</a>
+            <a href="/profile" class="text-gray-700 hover:text-purple-600 transition-colors">Profile</a>
+            <form method="POST" action="/logout" on:submit={confirmLogout}>
+              <button type="submit" class="text-gray-700 hover:text-purple-600 transition-colors">Logout</button>
+            </form>
+          {/if}
+        {:else}
+          <a href="/info" class="text-gray-700 hover:text-purple-600 transition-colors">Info</a>
+          <a href="/contact" class="text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+          <a href="/login" class="text-gray-700 hover:text-purple-600 transition-colors">Login</a>
+        {/if}
+      </nav>
+    </div>
+  {/if}
+</header>
 
 <div class="container mx-auto">
 	<slot />
