@@ -1,15 +1,14 @@
 import { fail } from '@sveltejs/kit';
 import axios from 'axios';
-
+const API_URL = process.env.VITE_API_URL;
 
 export const load = async ({ locals }) => {
     console.log('Server Load Ran')
 
     const getUserByEmail = async () => {
         const email = locals.user.email;
-        const response = await fetch(`http://localhost:8080/api/users/email/${email}`);
-        const data = await response.json();
-        return data;
+        const response = await axios.get(`${API_URL}/users/email/${email}`);
+        return response.data;
     };
     
     return {
