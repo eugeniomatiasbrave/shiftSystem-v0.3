@@ -103,14 +103,6 @@ const initializePassportConfig = () => {
   
 };
 
-/*
-function cookieExtractor(req) {
-  if (req && req.cookies) {
-      return req.cookies['token'];
-  }
-  return null;
-}
-  */
 const customHeaderExtractor = (req) => {
   const authHeader = req.headers.authorization;
   if (authHeader && authHeader.startsWith("Bearer token=")) {
