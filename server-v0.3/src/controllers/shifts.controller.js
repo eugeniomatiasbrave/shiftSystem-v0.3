@@ -3,16 +3,111 @@ import logger from "../config/log4js.config.js"; // import the logger from the l
 import { BadRequestError } from "../utils/customError.js"; // import the custom errors
 import HttpRes from "../utils/httpResponse.js"; // Importa la clase de respuesta HTTP
 
+// /api/shifts); Consultar todos los turnos .....ok
 const getShifts = async (req, res, next) => {
-  // Obtiene todos los turnos
   try {
     const shifts = await shiftsServices.getShifts();
-    HttpRes.Success(res, shifts); // Use the Success method from the HttpRes class to send the
+    HttpRes.Success(res, shifts);
   } catch (error) {
     logger.error("Error retrieving shifts:", error);
-    next(error); // Pasa el error al manejador de errores
+    next(error);
   }
 };
+
+// /api/shifts/user/${id_user}; Consultar turnos por usuario .....ok
+const getShiftsByUser = async (req, res, next) => {
+  try {
+    const { id_user } = req.params;
+    const shifts = await shiftsServices.getShiftsByUser(id_user);
+    HttpRes.Success(res, shifts);
+  } catch (error) {
+    logger.error("Error retrieving shifts by user:", error);
+    next(error);
+  }
+};
+
+// /api/shifts/reserve/:id_shift; Reservar un turno...ok
+const reserveShift = async (req, res, next) => {
+  try {
+    const { id_shift } = req.params; // ID del turno a reservar
+    const { id_user } = req.body; // ID del usuario que reserva el turno
+
+    // Verificar que el turno existe y está disponible
+    const shift = await shiftsServices.getShiftById(id_shift);
+    if (!shift) {
+      logger.warn(`Shift with id_shift ${id_shift} not found`);
+      throw new BadRequestError("Shift not found");
+    }
+    if (shift.status !== "available") {
+      logger.warn(`Shift with id_shift ${id_shift} is not available`);
+      throw new BadRequestError("Shift is not available for reservation");
+    }
+
+    const updatedShift = {
+      id_user,
+      status: "reserved",
+    };
+    const result = await shiftsServices.updateShift(id_shift, updatedShift);
+
+    HttpRes.Success(res, result); // Respuesta exitosa
+  } catch (error) {
+    logger.error("Error reserving shift:", error);
+    next(error);
+  }
+};
+
+// /api/shifts/cancel/:id_shift; Cancelar un turno
+const cancelShift = async (req, res, next) => {
+  try {
+    const { id_shift } = req.params;
+    const { id_user } = req.body;
+
+    // Convertir id_user a numérico para evitar problemas de comparación de tipos
+    const numericUserId = Number(id_user);
+
+    const shift = await shiftsServices.getShiftById(id_shift);
+    if (!shift) {
+      throw new BadRequestError("Shift not found");
+    }
+
+    // Añadir logs para depuración
+    logger.info(`Cancelando turno: ID: ${id_shift}, Estado: ${shift.status}, Usuario del turno: ${shift.id_user}, Usuario solicitante: ${numericUserId}`);
+    
+    // Verificar que el turno está reservado por el usuario
+    if (shift.status !== "reserved") {
+      throw new BadRequestError("Shift is not in reserved status");
+    }
+    
+    if (shift.id_user !== numericUserId) {
+      throw new BadRequestError("Shift cannot be canceled by this user");
+    }
+
+    // Verificar que la cancelación sea con al menos 24 horas de anticipación
+    const now = new Date();
+    const shiftDateTime = new Date(`${shift.date}T${shift.time}`);
+    const hoursDifference = (shiftDateTime - now) / (1000 * 60 * 60);
+    
+    logger.info(`Diferencia de horas para cancelación: ${hoursDifference} horas`);
+    
+    if (hoursDifference < 24) {
+      throw new BadRequestError("Cannot cancel within 24 hours of the shift");
+    }
+
+    // Actualizar el estado del turno a "canceled"
+    const updatedShift = {
+      id_user: null,
+      status: "canceled",
+    };
+    const result = await shiftsServices.updateShift(id_shift, updatedShift);
+
+    HttpRes.Success(res, result);
+  } catch (error) {
+    logger.error("Error canceling shift:", error);
+    next(error);
+  }
+};
+
+
 
 const getShiftById = async (req, res, next) => {
   // Obtiene un turno por su id_shift
@@ -30,17 +125,6 @@ const getShiftById = async (req, res, next) => {
   }
 };
 
-const getShiftsByUser = async (req, res, next) => {
-  // Obtiene todos los turnos por id_user
-  try {
-    const { id_user } = req.params;
-    const shifts = await shiftsServices.getShiftsByUser(id_user);
-    HttpRes.Success(res, shifts);
-  } catch (error) {
-    logger.error("Error retrieving shifts by user:", error);
-    next(error);
-  }
-};
 
 const getShiftByDate = async (req, res, next) => {
   // Obtiene un turno por su fecha
@@ -133,36 +217,6 @@ const updateShiftStatus = async (req, res, next) => {
   }
 };
 
-const reserveShift = async (req, res, next) => {
-  // Reserva un turno existente
-  try {
-    const { id_shift } = req.params; // ID del turno a reservar
-    const { id_user } = req.body; // ID del usuario que reserva el turno
-
-    // Verificar que el turno existe y está disponible
-    const shift = await shiftsServices.getShiftById(id_shift);
-    if (!shift) {
-      logger.warn(`Shift with id_shift ${id_shift} not found`);
-      throw new BadRequestError("Shift not found");
-    }
-    if (shift.status !== "available") {
-      logger.warn(`Shift with id_shift ${id_shift} is not available`);
-      throw new BadRequestError("Shift is not available for reservation");
-    }
-
-    // Actualizar el turno con el ID del usuario y cambiar el estado a "reserved"
-    const updatedShift = {
-      id_user,
-      status: "reserved",
-    };
-    const result = await shiftsServices.updateShift(id_shift, updatedShift);
-
-    HttpRes.Success(res, result); // Respuesta exitosa
-  } catch (error) {
-    logger.error("Error reserving shift:", error);
-    next(error); // Manejo de errores
-  }
-};
 
 const rescheduleShift = async (req, res, next) => {
   // Reprograma un turno existente
@@ -183,41 +237,6 @@ const rescheduleShift = async (req, res, next) => {
   } catch (error) {
     logger.error("Error rescheduling shift:", error);
     next(error);
-  }
-};
-
-const cancelShift = async (req, res, next) => {
-  // Cancela un turno existente
-  try {
-    const { id_shift } = req.params; // ID del turno a cancelar
-    const { id_user } = req.body; // ID del usuario que solicita la cancelación
-
-    // Verificar que el turno existe
-    const shift = await shiftsServices.getShiftById(id_shift);
-    if (!shift) {
-      logger.warn(`Shift with id_shift ${id_shift} not found`);
-      throw new BadRequestError("Shift not found");
-    }
-
-    // Verificar que el turno está reservado por el usuario
-    if (shift.status !== "reserved" || shift.id_user !== id_user) {
-      logger.warn(
-        `Shift with id_shift ${id_shift} cannot be canceled by user ${id_user}`
-      );
-      throw new BadRequestError("Shift cannot be canceled");
-    }
-
-    // Actualizar el estado del turno a "canceled"
-    const updatedShift = {
-      status: "canceled",
-      id_user: null, // Liberar el turno
-    };
-    const result = await shiftsServices.updateShift(id_shift, updatedShift);
-
-    HttpRes.Success(res, result); // Respuesta exitosa
-  } catch (error) {
-    logger.error("Error canceling shift:", error);
-    next(error); // Manejo de errores
   }
 };
 
