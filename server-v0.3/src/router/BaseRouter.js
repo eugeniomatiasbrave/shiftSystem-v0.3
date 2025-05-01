@@ -4,6 +4,7 @@
 import { Router } from "express";
 import { passportCall } from "../middlewares/passportCall.js";
 import { executePolicies } from "../middlewares/policies.js";
+import logger from "../config/log4js.config.js";
 
 export default class BaseRouter {
 	constructor(){
@@ -43,7 +44,21 @@ export default class BaseRouter {
 				await callback.apply(this,params);// aplico el callback con los parametros que recibo
 			}
 			catch(error){
-				params[1].status(500).send({ status:'error', error:`${error.name} ${error.message}`});
+				logger.error(`Error en ruta ${params[0].originalUrl}: ${error.name} - ${error.message}`);
+				
+				// Determinar el código de estado HTTP apropiado basado en el tipo de error
+				let statusCode = 500;
+				if (error.name.includes('BadRequest')) statusCode = 400;
+				if (error.name.includes('Unauthorized')) statusCode = 401;
+				if (error.name.includes('Forbidden')) statusCode = 403;
+				if (error.name.includes('NotFound')) statusCode = 404;
+				if (error.name.includes('Conflict')) statusCode = 409;
+				
+				params[1].status(statusCode).json({ 
+					status: statusCode, 
+					message: error.message || 'Error en el servidor',
+					error: error.name
+				});
 			} // params[1] es el res
 		})
 	}	
