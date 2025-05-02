@@ -33,7 +33,6 @@ function formatDate(dateString) {
                        
 						{#each getShiftsByUser.data as shift}
 							<tr>
-								
 								<input type="hidden" name="id" value={shift._id}>
 								
 								<td>{formatDate(shift.date)}</td>
