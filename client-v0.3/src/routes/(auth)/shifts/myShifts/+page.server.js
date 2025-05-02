@@ -45,16 +45,19 @@ export const load = async ({ locals }) => {
 export const actions = {
 	default: async ({ request, locals }) => {
 		const formData = await request.formData();
-		const id_user = Number(locals.user.id_user);
-		const id_shift = formData.get('id');
+		const id_user = locals.user.id_user;
+		const id_shift = formData.get('id_shift');
 
 		if (!id_shift) {
 			return fail(400, { error: 'Appointment ID is required for cancellation' });
 		}
 
-		const body = { id_user, id_shift: Number(id_shift) };
+		const body = { 
+			    id_user: Number(id_user),
+			    id_shift: Number(id_shift) 
+			};
 
-		// Get token from locals or cookies
+		// 
 		let token = locals.user?.token;
 		
 		if (!token) {

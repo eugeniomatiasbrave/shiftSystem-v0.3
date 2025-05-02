@@ -38,6 +38,7 @@ const reserveShift = async (req, res, next) => {
       logger.warn(`Shift with id_shift ${id_shift} not found`);
       throw new BadRequestError("Shift not found");
     }
+    // Verificar que el turno está disponible
     if (shift.status !== "available") {
       logger.warn(`Shift with id_shift ${id_shift} is not available`);
       throw new BadRequestError("Shift is not available for reservation");
@@ -59,14 +60,17 @@ const reserveShift = async (req, res, next) => {
 // /api/shifts/cancel/:id_shift; Cancelar un turno
 const cancelShift = async (req, res, next) => {
   try {
-    const { id_shift } = req.params;
-    const { id_user } = req.body;
+    const { id_shift } = req.params; // ID del turno a cancelar
+    const { id_user } = req.body; // ID del usuario que solicita la cancelación
 
     // Convertir id_user a numérico para evitar problemas de comparación de tipos
     const numericUserId = Number(id_user);
 
-    const shift = await shiftsServices.getShiftById(id_shift);
-    if (!shift) {
+    // Obtener el turno por su ID
+    const shift = await shiftsServices.getShiftById(id_shift); 
+
+    // Verificar si el turno existe
+    if (!shift) { 
       throw new BadRequestError("Shift not found");
     }
 
@@ -78,25 +82,11 @@ const cancelShift = async (req, res, next) => {
       throw new BadRequestError("Shift is not in reserved status");
     }
     
-    if (shift.id_user !== numericUserId) {
-      throw new BadRequestError("Shift cannot be canceled by this user");
-    }
-
-    // Verificar que la cancelación sea con al menos 24 horas de anticipación
-    const now = new Date();
-    const shiftDateTime = new Date(`${shift.date}T${shift.time}`);
-    const hoursDifference = (shiftDateTime - now) / (1000 * 60 * 60);
-    
-    logger.info(`Diferencia de horas para cancelación: ${hoursDifference} horas`);
-    
-    if (hoursDifference < 24) {
-      throw new BadRequestError("Cannot cancel within 24 hours of the shift");
-    }
-
-    // Actualizar el estado del turno a "canceled"
+  
+    // Actualizar el estado del turno a "available" y quitar la referencia al usuario
     const updatedShift = {
       id_user: null,
-      status: "canceled",
+      status: "available",
     };
     const result = await shiftsServices.updateShift(id_shift, updatedShift);
 
@@ -268,12 +258,10 @@ export default {
 };
 
 // MEJORA DEL MODELO DE TURNOS:
-// 4. Los turnos disponibles son eliminados al cumplirse el horario del turno.
 
-// Definir reglas claras para cancelacion de turnos:
-// 1. Solo se pueden cancelar turnos con al menos 24 horas de anticipacion.
-// 2. Nodevolucion de dinero en caso de cancelacion tardias dentro de las 24 horas.
-// 3. En caso de cancelacion, el turno se marca como "cancelado" y no se elimina de la base de datos.
+// Reglas para cancelacion de turnos:
+// 1. Los turno no pueden cancelarse si se encuentran dentro de las 24 horas de la fecha y hora del turno.
+// 2. Los turnos pueden cancelarse si se encuentran fuera de las 24 horas de la fecha y hora del turno, y se les asigna nuevamente el estado de "available".
 
 // Historial de turnos:
 // 1. Se guardan los turnos cancelados para llevar un registro de los mismos.

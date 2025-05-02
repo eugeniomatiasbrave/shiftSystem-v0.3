@@ -580,3 +580,587 @@
 [2025-05-01T18:56:50.100] [INFO] default - Auth header recibido: undefined
 [2025-05-01T18:56:50.100] [WARN] default - No se recibió un token en formato correcto: undefined
 [2025-05-01T18:56:50.101] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:02:53.453] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:02:53.455] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:02:53.456] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:02:53.457] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:02:53.457] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:02:53.590] [INFO] default - Usuario autenticado: eugeniomatiasbrave@gmail.com (ID: 1)
+[2025-05-01T19:04:18.072] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:04:18.073] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:04:18.073] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:04:18.073] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:04:18.074] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:04:18.206] [INFO] default - Usuario autenticado: eugeniomatiasbrave@gmail.com (ID: 1)
+[2025-05-01T19:04:21.613] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:04:21.613] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:04:21.614] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:04:21.620] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-05-01T19:04:23.591] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:04:23.591] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:04:23.592] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:04:23.592] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:04:23.592] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:04:23.592] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:04:25.981] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:04:25.982] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:04:25.982] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:04:25.983] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:04:25.983] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:04:25.983] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:04:28.863] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:04:28.864] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:04:28.864] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:04:28.864] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:04:28.864] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:04:28.865] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:48.519] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:48.520] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:48.520] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:48.520] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:48.520] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:48.521] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:52.282] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:52.282] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:52.283] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:52.283] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:52.283] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:52.283] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:54.173] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:54.174] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:54.174] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:54.174] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:54.174] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:54.175] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:55.816] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:55.816] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:55.816] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:55.816] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:55.817] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:55.817] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:57.287] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:57.288] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:57.288] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:57.289] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:57.290] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:57.290] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:59.337] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:59.337] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:59.337] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:05:59.338] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:05:59.338] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:05:59.338] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:06:01.433] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:06:01.434] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:06:01.434] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:06:01.435] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:06:01.435] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:06:01.436] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:06:01.880] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:06:01.881] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:06:01.881] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:06:01.881] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:06:01.881] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:06:01.882] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:15:25.795] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:15:25.795] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:15:25.796] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:15:25.796] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:15:25.796] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:15:25.910] [INFO] default - Usuario autenticado: eugeniomatiasbrave@gmail.com (ID: 1)
+[2025-05-01T19:15:28.332] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:15:28.333] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:15:28.334] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:15:28.334] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:15:28.334] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:15:28.335] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:15:29.785] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:15:29.786] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:15:29.786] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:15:29.786] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:15:29.787] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:15:29.788] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:15:31.114] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:15:31.115] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:15:31.115] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:15:31.116] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:15:31.116] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:15:31.116] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:16:55.910] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:16:55.912] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:16:55.914] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:16:55.914] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:16:55.915] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:16:56.071] [INFO] default - Usuario autenticado: eugeniomatiasbrave@gmail.com (ID: 1)
+[2025-05-01T19:16:58.561] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:16:58.561] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:16:58.562] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:16:58.562] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:16:58.562] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:16:58.563] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:03.172] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:03.172] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:03.173] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:03.174] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:03.174] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:03.175] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:04.982] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:04.983] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:04.984] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:04.984] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:04.984] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:04.984] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:06.666] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:06.667] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:06.667] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:06.668] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:06.668] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:06.668] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:09.073] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:09.074] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:09.074] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:09.075] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:09.076] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:09.077] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:10.347] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:10.348] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:10.348] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:10.349] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:10.349] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:10.350] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:13.839] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:13.839] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:13.839] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:17:13.839] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:17:13.840] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:17:13.840] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:21:34.671] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:21:34.671] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:21:34.672] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:21:34.672] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:21:34.673] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:21:34.674] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:21:37.100] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:21:37.100] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:21:37.101] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:21:37.101] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:21:37.101] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:21:37.102] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:21:38.786] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:21:38.787] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:21:38.788] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:21:38.789] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:21:38.789] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:21:38.790] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:21:40.368] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:21:40.368] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:21:40.369] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:21:40.369] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:21:40.369] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:21:40.369] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:22:03.502] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:22:03.502] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:22:03.503] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:22:03.503] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:22:03.503] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:22:03.504] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:22:23.550] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:22:23.552] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:22:23.553] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:22:23.558] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:22:23.560] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:22:23.561] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:22:24.960] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:22:24.961] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:22:24.961] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:22:24.962] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:22:24.962] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:22:24.965] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:23:01.615] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:23:01.616] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:23:01.616] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:23:01.616] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:23:01.617] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:23:01.617] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:23:07.624] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:23:07.625] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:23:07.625] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:23:07.625] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:23:07.625] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:23:07.626] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:25:48.906] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:25:48.906] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:25:48.906] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:25:48.908] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:25:48.908] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:25:48.908] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:25:53.486] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:25:53.489] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:25:53.490] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:25:53.490] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:25:53.491] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:25:53.491] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:26:09.301] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:26:09.301] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:26:09.302] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T19:26:09.302] [INFO] default - Auth header recibido: undefined
+[2025-05-01T19:26:09.302] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T19:26:09.302] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:07:55.184] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:07:55.184] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:07:55.184] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:07:55.185] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:07:55.185] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:07:55.185] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:07:57.447] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:07:57.447] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:07:57.448] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:07:57.448] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:07:57.448] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:07:57.449] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:11:19.620] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:11:19.620] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:11:19.621] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:11:19.621] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:11:19.621] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:11:19.622] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:11:22.788] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:11:22.789] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:11:22.790] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:11:22.791] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:11:22.791] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:11:22.792] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:11:59.159] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:11:59.160] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:11:59.160] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:11:59.161] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:11:59.164] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:11:59.164] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:14:36.682] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:14:36.682] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:14:36.683] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:14:36.683] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:14:36.683] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:14:36.684] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:14:39.780] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:14:39.780] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:14:39.780] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:14:39.781] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:14:39.781] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:14:39.781] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:14:41.244] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:14:41.244] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:14:41.245] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:14:41.245] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:14:41.245] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:14:41.245] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:14:42.229] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:14:42.230] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:14:42.232] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:14:42.233] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:14:42.233] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:14:42.233] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:14:44.607] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:14:44.607] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:14:44.608] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:14:44.608] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:14:44.609] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:14:44.609] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:15:06.106] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:15:06.106] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:15:06.106] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:15:06.107] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:15:06.107] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:15:06.107] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:16:23.583] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:16:23.583] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:16:23.584] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:16:23.584] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:16:23.584] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:16:23.584] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:17:11.510] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:17:11.511] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:17:11.511] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-01T22:17:11.511] [INFO] default - Auth header recibido: undefined
+[2025-05-01T22:17:11.511] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-01T22:17:11.512] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:04:12.784] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:04:12.789] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:04:12.791] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:04:12.792] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:04:12.793] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:04:12.989] [INFO] default - Usuario autenticado: eugeniomatiasbrave@gmail.com (ID: 1)
+[2025-05-02T17:04:35.661] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:04:35.662] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:04:35.664] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:04:35.665] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:04:35.665] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:04:35.667] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:04:53.303] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:04:53.303] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:04:53.304] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:04:53.304] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:04:53.304] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:04:53.305] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:05:12.747] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:05:12.747] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:05:12.748] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:05:12.748] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:05:12.749] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:05:12.749] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:05:17.342] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:05:17.343] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:05:17.343] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:05:17.344] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:05:17.344] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:05:17.345] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:45:16.795] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:45:16.797] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:45:16.798] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:45:16.799] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:45:16.799] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:45:16.800] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:45:27.364] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:45:27.365] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:45:27.365] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:45:27.366] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:45:27.366] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:45:27.366] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:46:57.663] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T17:46:57.664] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T17:46:57.664] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:46:57.664] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T17:46:57.664] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T17:46:57.665] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:46:57.718] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:46:57.719] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:46:57.719] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:46:57.719] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:46:57.720] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:46:57.720] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:47:10.496] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:47:10.497] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:47:10.497] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:47:10.498] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:47:10.498] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:47:10.498] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:48:28.803] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T17:48:28.804] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T17:48:28.804] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:48:28.804] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T17:48:28.805] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T17:48:28.805] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:48:28.817] [ERROR] default - Error canceling shift: BadRequestError [BadRequest Error]: Shift not found
+    at ShiftsRouter.cancelShift (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/shifts.controller.js:73:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:44:5
+[2025-05-02T17:48:37.659] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:48:37.659] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:48:37.660] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:48:37.660] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:48:37.660] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:48:37.660] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:48:40.608] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:48:40.609] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:48:40.609] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:48:40.609] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:48:40.609] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:48:40.610] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:49:05.460] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:49:05.461] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:49:05.461] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:49:05.461] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:49:05.461] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:49:05.462] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:49:15.712] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:49:15.712] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:49:15.712] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:49:15.713] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:49:15.713] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:49:15.713] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:49:33.722] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T17:49:33.723] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T17:49:33.723] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:49:33.723] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T17:49:33.723] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T17:49:33.724] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:49:33.734] [ERROR] default - Error canceling shift: BadRequestError [BadRequest Error]: Shift not found
+    at ShiftsRouter.cancelShift (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/shifts.controller.js:73:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:44:5
+[2025-05-02T17:49:36.609] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:49:36.609] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:49:36.610] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T17:49:36.610] [INFO] default - Auth header recibido: undefined
+[2025-05-02T17:49:36.610] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T17:49:36.610] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:11:02.115] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:11:02.119] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:11:02.121] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:11:02.122] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:11:02.123] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:11:02.123] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:11:54.645] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:11:54.645] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:11:54.646] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:11:54.646] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:11:54.647] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:11:54.647] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:11:58.879] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:11:58.880] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:11:58.880] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:11:58.881] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:11:58.882] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:11:58.882] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:12:32.959] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:12:32.959] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:12:32.960] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:12:32.972] [INFO] default - User with email eugeniomatiasbrave@gmail.com retrieved successfully
+[2025-05-02T18:12:33.289] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:12:33.289] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:12:33.289] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:12:33.290] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:12:33.290] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:12:33.290] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:13:05.057] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T18:13:05.057] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T18:13:05.058] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:13:05.058] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T18:13:05.058] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T18:13:05.059] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:13:05.070] [ERROR] default - Error canceling shift: BadRequestError [BadRequest Error]: Shift not found
+    at ShiftsRouter.cancelShift (file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/controllers/shifts.controller.js:74:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async file:///C:/Users/eugen/OneDrive/Desktop/Proyectos-EB/Shift-v0.3/server-v0.3/src/router/BaseRouter.js:44:5
+[2025-05-02T18:13:05.084] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:13:05.085] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:13:05.086] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:13:05.087] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:13:05.087] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:13:05.087] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:13:07.240] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:13:07.241] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:13:07.242] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:13:07.242] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:13:07.242] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:13:07.243] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:13:13.261] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:13:13.262] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:13:13.262] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:13:13.263] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:13:13.263] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:13:13.263] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:49:32.075] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:49:32.076] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:49:32.076] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:49:32.077] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:49:32.077] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:49:32.077] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:49:34.057] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:49:34.057] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:49:34.058] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:49:34.058] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:49:34.058] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:49:34.058] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:50:52.116] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:50:52.117] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:50:52.118] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:50:52.118] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:50:52.119] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:50:52.120] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:51:43.088] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:51:43.088] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:51:43.089] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:51:43.089] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:51:43.090] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:51:43.090] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:51:54.070] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:51:54.070] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:51:54.071] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:51:54.071] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:51:54.071] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:51:54.072] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:52:54.062] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:52:54.063] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:52:54.063] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:52:54.063] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:52:54.064] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:52:54.065] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:52:56.052] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:52:56.052] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:52:56.052] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:52:56.052] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:52:56.052] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:52:56.053] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:52:59.069] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:52:59.070] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:52:59.070] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:52:59.071] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:52:59.071] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:52:59.071] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:53:14.961] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T18:53:14.961] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T18:53:14.961] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:53:14.962] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T18:53:14.962] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T18:53:14.962] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:53:14.998] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:53:14.999] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:53:15.001] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:53:15.001] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:53:15.001] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:53:15.002] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:53:16.307] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:53:16.308] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:53:16.309] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:53:16.309] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:53:16.310] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:53:16.310] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:55:11.134] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:55:11.135] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:55:11.136] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:55:11.136] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:55:11.137] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:55:11.137] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:55:16.840] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T18:55:16.841] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T18:55:16.841] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:55:16.842] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T18:55:16.842] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T18:55:16.842] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:55:16.858] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:55:16.859] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:55:16.859] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:55:16.859] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:55:16.859] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:55:16.860] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:55:20.011] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:55:20.012] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:55:20.012] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:55:20.013] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:55:20.013] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:55:20.014] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:58:07.694] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:58:07.694] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:58:07.695] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:58:07.695] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:58:07.695] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:58:07.695] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:58:12.150] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T18:58:12.151] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T18:58:12.151] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:58:12.151] [INFO] default - Auth header recibido: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c2VyIjoxLCJlbWFpbCI6ImV1Z2VuaW9tYXRpYXNicmF2ZUBnbWFpbC5jb20iLCJmaXJzdE5hbWUiOiJFdWdlbmlvb28iLCJsYXN0TmFtZSI6IkJyYXZlIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NDYyMTYyNTIsImV4cCI6MTc0NjMwMjY1Mn0.TeIgFQW_sInkp12d0c1K3DrBZikpBEE0pvKDSxYd54c
+[2025-05-02T18:58:12.151] [INFO] default - Token extraído correctamente: eyJhbGciOiJIUzI1NiIs...
+[2025-05-02T18:58:12.151] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:58:12.165] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:58:12.165] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:58:12.165] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:58:12.166] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:58:12.166] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:58:12.167] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:58:14.829] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:58:14.830] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:58:14.830] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-02T18:58:14.831] [INFO] default - Auth header recibido: undefined
+[2025-05-02T18:58:14.831] [WARN] default - No se recibió un token en formato correcto: undefined
+[2025-05-02T18:58:14.831] [WARN] default - Usuario no autenticado: No auth token

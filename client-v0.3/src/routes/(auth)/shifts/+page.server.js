@@ -44,8 +44,8 @@ export const load = async ({ locals, url }) => {
 export const actions = {
     reserve: async ({ request, locals }) => {
         const formData = await request.formData();
-        const id_user = Number(locals.user.id_user);
-        const id_shift = formData.get("id");
+        const id_user = locals.user.id_user;
+        const id_shift = formData.get("id_shift");
 
         // Validate input
         if (!id_shift) {
@@ -54,9 +54,11 @@ export const actions = {
 
         // Prepare request body
         const body = { 
-            id_user, 
+            id_user: Number(id_user), 
             id_shift: Number(id_shift)
         };
+
+        console.log("Request body:", body);
         
         // Get token from locals or cookie
         let token = locals.user?.token;
