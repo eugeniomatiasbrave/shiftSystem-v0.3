@@ -105,7 +105,7 @@ export const actions = {
 			// Handle specific error cases
 			if (error.response?.status === 403) {
 				return fail(403, { 
-					error: 'You cannot cancel this appointment. It may be too close to the scheduled time.' 
+					error: 'No se puede cancelar un turno dentro de las 24 horas previas a la cita programada.' 
 				});
 			}
 			

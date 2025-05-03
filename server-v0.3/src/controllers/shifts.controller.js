@@ -1,6 +1,6 @@
 import { shiftsServices } from "../services/indexRepositories.js"; // import the productsService from the indexRepositories.js file
 import logger from "../config/log4js.config.js"; // import the logger from the log4js.config.js file
-import { BadRequestError } from "../utils/customError.js"; // import the custom errors
+import { BadRequestError, ForbiddenError } from "../utils/customError.js"; // import the custom errors
 import HttpRes from "../utils/httpResponse.js"; // Importa la clase de respuesta HTTP
 
 // /api/shifts); Consultar todos los turnos .....ok
@@ -82,6 +82,14 @@ const cancelShift = async (req, res, next) => {
       throw new BadRequestError("Shift is not in reserved status");
     }
     
+    // Verificar que el turno no esté dentro de las 24 horas
+    const shiftDateTime = new Date(`${shift.date}T${shift.time}`);
+    const currentDateTime = new Date();
+    const cancelationLimit = new Date(currentDateTime.getTime() + 24 * 60 * 60 * 1000);
+
+    if (shiftDateTime < cancelationLimit) {
+      throw new ForbiddenError("Cannot cancel a shift within 24 hours of its scheduled time");
+    }
   
     // Actualizar el estado del turno a "available" y quitar la referencia al usuario
     const updatedShift = {
