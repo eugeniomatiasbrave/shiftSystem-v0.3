@@ -1,0 +1,1 @@
+<!-- Vista de confirmación de pago exitoso -->

@@ -1,0 +1,172 @@
+[
+  {
+    "glob": "client/src/**/*.{svelte,js,ts}",
+    "language": ["svelte", "javascript", "typescript"],
+    "docs": [
+      {
+        "name": "SvelteKit",
+        "url": "https://kit.svelte.dev/docs" 
+      },
+      {
+        "name": "Tailwind CSS", 
+        "url": "https://tailwindcss.com/docs"
+      },
+      {
+        "name": "Axios", 
+        "url": "https://axios-http.com/docs/intro"
+      }
+    ]
+  },
+  
+  {
+    "glob": "client/src/lib/stores/**/*.{js,ts}",
+    "language": ["javascript", "typescript"],
+    "docs": [
+      {
+        "name": "Svelte Stores",
+        "url": "https://svelte.dev/docs/svelte-store"
+      },
+      {
+        "name": "SvelteKit Load Function",
+        "url": "https://kit.svelte.dev/docs/load"
+      }
+    ]
+  },
+  
+  {
+    "glob": "client/tailwind.config.{js,cjs,mjs,ts}",
+    "language": ["javascript", "typescript"],
+    "docs": [
+      {
+        "name": "Tailwind Config",
+        "url": "https://tailwindcss.com/docs/configuration"
+      },
+      {
+        "name": "DaisyUI",
+        "url": "https://daisyui.com/docs/install/"
+      }
+    ]
+  },
+ 
+  {
+    "glob": "server/src/**/*.{js,mjs}",
+    "language": ["javascript"],
+    "docs": [
+      {
+        "name": "Node.js",
+        "url": "https://nodejs.org/api" 
+      },
+      {
+        "name": "Express.js",
+        "url": "https://expressjs.com/en/starter/installing.html" 
+      },
+       {
+         "name": "Express.js FAQ",
+         "url": "https://expressjs.com/es/starter/faq.html"
+       },
+      {
+         "name": "Express Performance",
+         "url": "https://expressjs.com/es/advanced/best-practice-performance.html"
+       },
+      {
+         "name": "Express Security",
+         "url": "https://expressjs.com/es/advanced/best-practice-security.html"
+       }
+    ]
+  },
+  {
+    "glob": "server/src/db/**/*.{js,mjs}",
+    "language": ["javascript"],
+    "docs": [
+       {
+        "name": "Sequelize",
+        "url": "https://sequelize.org/docs/v6/" 
+      },
+      {
+        "name": "Sequelize Associations",
+        "url": "https://sequelize.org/docs/v6/core-concepts/assocs/"
+      },
+      {
+        "name": "MySQL Ref Manual",
+        "url": "https://dev.mysql.com/doc/refman/en/" 
+      },
+       {
+        "name": "MySQL Workbench Help",
+        "url": "https://dev.mysql.com/doc/workbench/en/wb-develop-sql-editor-help.html"
+      },
+       {
+        "name": "MySQL Shell JS",
+        "url": "https://dev.mysql.com/doc/x-devapi-userguide-shell-js/en/"
+      },
+        {
+        "name": "MySQL Shell GUI",
+        "url": "https://dev.mysql.com/doc/mysql-shell-gui/en/"
+      }
+
+    ]
+  },
+  {
+    "glob": "server/src/{middleware,controllers,config}/{auth*,passport*,*auth*,*middleware*,*policies*}.{js,mjs}",
+    "language": ["javascript"],
+    "docs": [
+      {
+        "name": "Passport.js",
+        "url": "https://www.passportjs.org/docs/"
+      },
+      {
+        "name": "Passport-JWT",
+        "url": "https://www.passportjs.org/packages/passport-jwt/"
+      },
+      {
+        "name": "JWT.io",
+        "url": "https://jwt.io/introduction"
+      },
+      {
+        "name": "JsonWebToken npm",
+        "url": "https://github.com/auth0/node-jsonwebtoken#readme"
+      }
+    ]
+  },
+  {
+    "glob": "**/*.{test,spec}.{js,mjs}",
+    "language": ["javascript"],
+    "docs": [
+      {
+        "name": "Jest",
+        "url": "https://jestjs.io/docs/getting-started"
+      },
+      {
+        "name": "Supertest",
+        "url": "https://github.com/ladjs/supertest#readme"
+      },
+      {
+        "name": "Chai",
+        "url": "https://www.chaijs.com/api/"
+      },
+      {
+        "name": "Mocha",
+        "url": "https://mochajs.org/#getting-started"
+      }
+    ]
+  },
+  {
+    "glob": "server/src/**/{validation,*validator*,schema*}.{js,mjs}",
+    "language": ["javascript"],
+    "docs": [
+      {
+        "name": "Joi",
+        "url": "https://joi.dev/api/"
+      }
+    ]
+  },
+  {
+    "glob": "**/*.js",
+    "language": ["javascript"],
+    "docs": [
+      {
+        "name": "MDN JavaScript",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      }
+    ]
+  }
+] 

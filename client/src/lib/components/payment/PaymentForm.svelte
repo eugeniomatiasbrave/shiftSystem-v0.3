@@ -1,0 +1,1 @@
+<!-- Formulario base de pago que actúa como contenedor --> 

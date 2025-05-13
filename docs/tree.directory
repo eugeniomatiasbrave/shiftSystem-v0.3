@@ -1,0 +1,139 @@
+# Estructura de Directorios Frontend - Shift Management System
+
+De acuerdo con el contexto de la aplicación en `ApplicationContext.md`, aquí está la estructura mejorada completa:
+
+```
+client/
+├── src/                           # Código fuente principal
+│   ├── lib/                       # Biblioteca de componentes y utilidades
+│   │   ├── components/            # Componentes de UI organizados por función
+│   │   │   ├── common/            # Componentes comunes en toda la aplicación
+│   │   │   │   ├── Header.svelte          # Barra de navegación superior
+│   │   │   │   ├── Footer.svelte          # Pie de página 
+│   │   │   │   ├── Sidebar.svelte         # Navegación lateral
+│   │   │   │   ├── LogoutButton.svelte    # Botón para cerrar sesión
+│   │   │   │   └── Notification.svelte    # Sistema de notificaciones
+│   │   │   ├── shifts/            # Componentes para la gestión de turnos/citas
+│   │   │   │   ├── Calendar.svelte        # Calendario interactivo con flatpickr
+│   │   │   │   ├── ShiftCard.svelte       # Tarjeta para mostrar información de turno
+│   │   │   │   ├── ShiftForm.svelte       # Formulario para crear/editar turnos
+│   │   │   │   ├── AvailabilitySlots.svelte # Slots de disponibilidad del profesional
+│   │   │   │   ├── ShiftList.svelte       # Lista de turnos programados
+│   │   │   │   └── ShiftReschedule.svelte # Componente para reprogramar citas
+│   │   │   ├── payment/           # Componentes relacionados con pagos
+│   │   │   │   ├── PaymentForm.svelte     # Formulario de pago
+│   │   │   │   ├── PaymentHistory.svelte  # Historial de pagos
+│   │   │   │   ├── PaymentSummary.svelte  # Resumen de pagos realizados
+│   │   │   │   └── PaymentConfirmation.svelte # Confirmación de pago exitoso
+│   │   │   └── ui/                # Elementos UI reutilizables con DaisyUI
+│   │   │       ├── Button.svelte          # Botones personalizados
+│   │   │       ├── Modal.svelte           # Ventanas modales
+│   │   │       ├── Input.svelte           # Campos de entrada
+│   │   │       ├── Spinner.svelte         # Indicador de carga
+│   │   │       ├── Card.svelte            # Componente tarjeta
+│   │   │       └── Alert.svelte           # Alertas y notificaciones (SweetAlert2)
+│   │   ├── stores/                # Estado global con Svelte stores
+│   │   │   ├── auth.js                    # Estado de autenticación y JWT
+│   │   │   ├── shifts.js                  # Estado de turnos/citas
+│   │   │   ├── calendar.js                # Estado del calendario y disponibilidad
+│   │   │   ├── payments.js                # Estado de pagos
+│   │   │   └── users.js                   # Estado de usuarios/pacientes
+│   │   ├── services/              # Servicios para comunicación con API
+│   │   │   ├── api.js                     # Cliente Axios configurado
+│   │   │   ├── authService.js             # Autenticación (login, logout, registro)
+│   │   │   ├── shiftService.js            # Gestión de turnos y citas
+│   │   │   ├── paymentService.js          # Procesamiento de pagos
+│   │   │   └── userService.js             # Gestión de usuarios
+│   │   ├── utils/                 # Funciones utilitarias
+│   │   │   ├── dateUtils.js               # Utilidades para fechas (date-fns)
+│   │   │   ├── validations.js             # Validación de formularios
+│   │   │   ├── formatters.js              # Formateadores (moneda, fechas)
+│   │   │   └── notifications.js           # Utilidades para notificaciones
+│   │   └── img/                   # Imágenes y recursos gráficos
+│   │       ├── logo.svg                   # Logo del sistema
+│   │       └── icons/                     # Iconos (Iconify)
+│   ├── routes/                    # Rutas de la aplicación SvelteKit
+│   │   ├── (auth)/
+│   │   │   ├── profile/
+│   │   │   │   ├── +page.svelte           # UI del perfil
+│   │   │   │   └── +page.server.js        # Carga datos del perfil desde la API
+│   │   │   ├── shifts/
+│   │   │   │   ├── +page.svelte               # UI de turnos disponibles
+│   │   │   │   ├── +page.server.js            # Carga turnos disponibles
+│   │   │   │   └── [id]/
+│   │   │   │       ├── +page.svelte           # UI de detalle/reserva de turno
+│   │   │   │       ├── +page.server.js        # Procesa la reserva del turno
+│   │   │   │       └── payment/
+│   │   │   │           ├── +page.svelte       # UI para realizar el pago del turno
+│   │   │   │           ├── +page.server.js    # Procesa la transacción de pago
+│   │   │   │           └── confirmation/
+│   │   │   │               ├── +page.svelte   # Confirmación del pago exitoso
+│   │   │   │               └── +page.server.js # Finalización y registro del pago
+│   │   │   ├── my-appointments/
+│   │   │   │   ├── +page.svelte               # UI de historial de citas del usuario
+│   │   │   │   ├── +page.server.js            # Carga historial de citas
+│   │   │   │   └── [id]/
+│   │   │   │       ├── +page.svelte           # Detalle de un pago específico
+│   │   │   │       └── +page.server.js        # Carga detalle del pago
+│   │   │   ├── payments/
+│   │   │   │   ├── +page.svelte               # UI de historial de pagos del usuario
+│   │   │   │   ├── +page.server.js            # Carga historial de pagos      
+│   │   │   │   └── [id]/
+│   │   │   │       ├── +page.svelte           # Detalle de un pago específico
+│   │   │   │       └── +page.server.js        # Carga detalle del pago
+│   │   │   └── logout/
+│   │   │       └── +page.server.js        # Maneja la lógica de cierre de sesión                 
+│   │   ├── (admin)/
+│   │   │   ├── dashboard/
+│   │   │   │   ├── +page.svelte           # UI del dashboard
+│   │   │   │   └── +page.server.js        # Carga datos de estadísticas y resumen
+│   │   │   ├── calendar/
+│   │   │   │   ├── +page.svelte           # UI de gestión del calendario
+│   │   │   │   └── +page.server.js        # Carga y guarda disponibilidad
+│   │   │   └── shifts/
+│   │   │       ├── +page.svelte           # UI de gestión de turnos
+│   │   │       ├── +page.server.js        # Carga turnos y maneja acciones
+│   │   │       └─── [id]/                  # Detalle de turno específico
+│   │   │            ├── +page.svelte       # UI del detalle del turno
+│   │   │            └── +page.server.js    # Carga dato específico del turno
+│   │   ├── login/
+│   │   │   ├── +page.svelte               # Formulario de login
+│   │   │   └── +page.server.js            # Procesa el login (usando JWT)
+│   │   ├── register/
+│   │   │   ├── +page.svelte               # Formulario de registro
+│   │   │   └── +page.server.js            # Procesa el registro de usuarios
+│   │   ├── contact/
+│   │   │   ├── +page.svelte               # Formulario de contacto
+│   │   │   └── +page.server.js            # Procesa el contacto
+│   │   ├── about/
+│   │   │   ├── +page.svelte               # Página sobre nosotros
+│   │   │   └── +page.server.js            # Carga datos de la página
+│   │   ├── +layout.svelte                 # Layout principal
+│   │   ├── +layout.server.js              # Verificación de autenticación global                 
+│   │   └── +page.svelte                # Página principal
+│   ├── app.html                   # Plantilla HTML principal
+│   ├── app.css                    # Estilos globales (Tailwind)
+│   └── hooks.server.js            # Hooks del servidor (autenticación JWT)
+├── static/                        # Archivos estáticos
+│   ├── favicon.ico                # Icono del sitio
+│   └── robots.txt                 # Configuración para crawlers
+├── tailwind.config.js             # Configuración de Tailwind CSS con DaisyUI
+├── postcss.config.js              # Configuración de PostCSS
+├── svelte.config.js               # Configuración de SvelteKit
+├── vite.config.js                 # Configuración de Vite
+├── eslint.config.js               # Reglas de linting
+├── .prettierrc                    # Configuración de Prettier
+├── .prettierignore                # Archivos ignorados por Prettier
+├── .gitignore                     # Archivos ignorados por Git
+├── package.json                   # Dependencias y scripts
+└── package-lock.json              # Versiones específicas de dependencias
+```
+
+Esta estructura está específicamente adaptada para el Sistema de Gestión de Turnos según el contexto de `ApplicationContext.md`, considerando:
+
+1. **Roles de usuario**: Secciones separadas para administradores (profesionales de salud) y pacientes
+2. **Tecnologías específicas**: Integración con Flatpickr para calendario, SweetAlert2 para notificaciones, JWT para autenticación
+3. **Funcionalidades clave**: Gestión de turnos, pagos, calendario de disponibilidad
+4. **Framework UI**: Componentes adaptados para usar Tailwind CSS y DaisyUI
+
+La estructura incluye explícitamente la funcionalidad de logout y está diseñada para facilitar el desarrollo de todas las características mencionadas en el documento de contexto.

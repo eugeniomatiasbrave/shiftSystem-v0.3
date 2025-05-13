@@ -1,0 +1,1 @@
+<!-- Indicador visual del estado de los turnos -->

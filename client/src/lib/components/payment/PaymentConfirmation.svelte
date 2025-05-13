@@ -1,0 +1,1 @@
+<!-- Componente para mostrar la confirmación del pago --> 
