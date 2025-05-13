@@ -1,1 +1,1 @@
-// Servicio para gestionar pagos
+// Servicio para procesamiento de pagos

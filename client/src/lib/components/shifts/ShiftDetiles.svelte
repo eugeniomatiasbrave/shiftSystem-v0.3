@@ -1,0 +1,1 @@
+<!-- Tarjeta para mostrar información de turno -->

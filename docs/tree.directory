@@ -8,23 +8,26 @@ client/
 │   ├── lib/                       # Biblioteca de componentes y utilidades
 │   │   ├── components/            # Componentes de UI organizados por función
 │   │   │   ├── common/            # Componentes comunes en toda la aplicación
+│   │   │   │   ├── BackButton.svelte    # Botón para retroceder en la historia del navegador
 │   │   │   │   ├── Header.svelte          # Barra de navegación superior
 │   │   │   │   ├── Footer.svelte          # Pie de página 
 │   │   │   │   ├── Sidebar.svelte         # Navegación lateral
-│   │   │   │   ├── LogoutButton.svelte    # Botón para cerrar sesión
-│   │   │   │   └── Notification.svelte    # Sistema de notificaciones
+│   │   │   │   └── StatusBadge.svelte     # Badge de estado
 │   │   │   ├── shifts/            # Componentes para la gestión de turnos/citas
-│   │   │   │   ├── Calendar.svelte        # Calendario interactivo con flatpickr
-│   │   │   │   ├── ShiftCard.svelte       # Tarjeta para mostrar información de turno
-│   │   │   │   ├── ShiftForm.svelte       # Formulario para crear/editar turnos
-│   │   │   │   ├── AvailabilitySlots.svelte # Slots de disponibilidad del profesional
+│   │   │   │   ├── ShiftCalendar.svelte        # Calendario interactivo con flatpickr
+│   │   │   │   ├── ShiftDetiles.svelte       # Tarjeta para mostrar información de turno
 │   │   │   │   ├── ShiftList.svelte       # Lista de turnos programados
 │   │   │   │   └── ShiftReschedule.svelte # Componente para reprogramar citas
 │   │   │   ├── payment/           # Componentes relacionados con pagos
 │   │   │   │   ├── PaymentForm.svelte     # Formulario de pago
 │   │   │   │   ├── PaymentHistory.svelte  # Historial de pagos
+│   │   │   │   ├── PaymentMethodSelector.svelte # Método de pago
 │   │   │   │   ├── PaymentSummary.svelte  # Resumen de pagos realizados
-│   │   │   │   └── PaymentConfirmation.svelte # Confirmación de pago exitoso
+│   │   │   │   ├── PaymentConfirmation.svelte # Confirmación de pago exitoso
+│   │   │   │   └── PaymentMethods/  # Métodos de pago
+│   │   │   │       ├── CreditCardForm.svelte # Formulario de pago con tarjeta de crédito
+│   │   │   │       ├── PayPalForm.svelte # Formulario de pago con PayPal
+│   │   │   │       └── MercadoPagoForm.svelte # Formulario de pago con Mercado Pago
 │   │   │   └── ui/                # Elementos UI reutilizables con DaisyUI
 │   │   │       ├── Button.svelte          # Botones personalizados
 │   │   │       ├── Modal.svelte           # Ventanas modales

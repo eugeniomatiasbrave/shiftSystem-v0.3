@@ -1,7 +1,7 @@
 <script>
 	import "../app.css";
 	import Swal from 'sweetalert2';
-	import Navbar from '$lib/components/common/Navbar.svelte';
+	import Header from '$lib/components/common/Header.svelte';
 
 	export let data;
 
@@ -24,7 +24,7 @@
     };
 </script>
 
-<Navbar user={data.user} {confirmLogout} />
+<Header user={data.user} {confirmLogout} />
 
 <div class="container mx-auto">
 	<slot />

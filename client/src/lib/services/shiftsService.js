@@ -1,1 +1,1 @@
-// Servicio para gestionar turnos
+// Gestión de turnos y citas
