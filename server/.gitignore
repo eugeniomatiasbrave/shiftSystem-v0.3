@@ -5,3 +5,8 @@ node_modules
 .env.prod
 package-lock.json
 
+# Ignorar carpetas y archivos específicos
+/docs/
+.rules
+.directory
+.mcp

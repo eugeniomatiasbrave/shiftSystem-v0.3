@@ -20,3 +20,15 @@
 [2025-05-14T09:15:38.960] [INFO] default - Auth header: undefined
 [2025-05-14T09:15:38.961] [INFO] default - Cookies: {}
 [2025-05-14T09:15:39.110] [INFO] default - Usuario autenticado: eugeniomatiasbrave@gmail.com (ID: 1)
+[2025-05-14T10:19:44.993] [INFO] default - Auth header: undefined
+[2025-05-14T10:19:44.998] [INFO] default - Cookies: {}
+[2025-05-14T10:19:45.000] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-14T10:19:45.001] [INFO] default - Auth header: undefined
+[2025-05-14T10:19:45.001] [INFO] default - Cookies: {}
+[2025-05-14T10:19:45.181] [INFO] default - Usuario autenticado: eugeniomatiasbrave@gmail.com (ID: 1)
+[2025-05-14T10:24:56.400] [INFO] default - Auth header: undefined
+[2025-05-14T10:24:56.400] [INFO] default - Cookies: {}
+[2025-05-14T10:24:56.401] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-14T10:24:56.402] [INFO] default - Auth header: undefined
+[2025-05-14T10:24:56.402] [INFO] default - Cookies: {}
+[2025-05-14T10:24:56.402] [WARN] default - Usuario no autenticado: No auth token
