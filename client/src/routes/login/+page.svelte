@@ -30,7 +30,7 @@
                                     title: 'Bienvenido!',
                                     text: 'Inicio de sesión exitoso',
                                     icon: 'success',
-                                    confirmButtonColor: "#0a7399",
+                                    confirmButtonColor: "#542169",
                                     confirmButtonText: 'Ok'
                                 }).then(() => { window.location.href = "/"; });
                             } else {

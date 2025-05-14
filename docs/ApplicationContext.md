@@ -37,6 +37,7 @@ La aplicación se centra en proporcionar una plataforma eficiente y accesible pa
   - Reservar turnos
   - Cancelar o reprogramar citas
   - Ver historial de citas anteriores
+  - Ver historial de Pagos
 
 ## Propuesta de Valor
 

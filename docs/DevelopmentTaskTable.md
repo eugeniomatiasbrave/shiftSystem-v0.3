@@ -6,125 +6,95 @@
 - Marque las tareas completadas cambiando "🔲 Pendiente" a "✅ Completado"
 - Las tareas complementarias están marcadas con [+]
 
-## Fase 1: Autenticación de Usuarios
+## Fase 1: Configuración y Estructura Base
 
-| ID | Descripción | Prioridad | Estado | Dependencias | Tiempo Estimado |
-|----|-------------|-----------|--------|--------------|-----------------|
-| 1.1 | Configurar modelo User en Sequelize | Alta | ✅ Completado | - | 2h |
-| 1.2 | Crear rutas de autenticación (/api/sessions/*) | Alta | ✅ Completado | 1.1 | 2h |
-| 1.3 | Implementar controlador de sesiones (register, login, logout) | Alta | ✅ Completado | 1.2 | 3h |
-| 1.4 | Crear middleware de autenticación (passportCall.js) | Alta | ✅ Completado | 1.3 | 2h |
-| 1.5 | Implementar middleware de políticas (policies.js) | Media | ✅ Completado | 1.4 | 2h |
-| 1.6 | Configurar JWT y dotenv para secretos | Alta | ✅ Completado | - | 1h |
-| 1.7 | Configurar estrategia Passport-JWT | Alta | ✅ Completado | 1.6 | 2h |
-| 1.8 | Implementar BaseRouter con manejo de respuestas estándar | Media | 🔲 Pendiente | - | 2h |
-| 1.9 | Crear servicio authService en frontend | Alta | 🔲 Pendiente | 1.3 | 2h |
-| 1.10 | Implementar store de autenticación (authStore.js) | Alta | 🔲 Pendiente | 1.9 | 2h |
-| 1.11 | Crear página de registro | Alta | ✅ Completado | 1.10 | 3h |
-| 1.12 | Crear página de login | Alta | ✅ Completado | 1.10 | 3h |
-| 1.13 | Implementar layout protegido (auth) | Alta | ✅ Completado | 1.10 | 2h |
-| 1.14 | Crear navbar con estados condicionados por autenticación | Media | ✅ Completado | 1.10 | 2h |
+| ID | Tarea | Estado | Responsable | Prioridad | Dependencias |
+|----|-------|--------|-------------|-----------|--------------|
+| 1.1 | Inicializar repositorios Git | ✅ Completado | | Alta | Ninguna |
+| 1.2 | Configurar entorno de desarrollo | ✅ Completado | | Alta | 1.1 |
+| 1.3 | Crear estructura de directorios backend | ✅ Completado | | Alta | 1.2 |
+| 1.4 | Crear estructura de directorios frontend | ✅ Completado | | Alta | 1.2 |
+| 1.5 | Configurar conexión a base de datos MySQL | ✅ Completado | | Alta | 1.3 |
+| 1.6 | Configurar ESLint y Prettier | 🔲 Pendiente | | Media | 1.3, 1.4 |
+| 1.7 | Configurar herramientas de testing | 🔲 Pendiente | | Media | 1.3, 1.4 |
 
-**Punto de Verificación 1**: Probar flujo completo de registro, login, acceso a rutas protegidas y logout.
+## Fase 2: Desarrollo del Backend
 
-## Fase 2: Visualización de Turnos Disponibles
+| ID | Tarea | Estado | Responsable | Prioridad | Dependencias |
+|----|-------|--------|-------------|-----------|--------------|
+| 2.1 | Implementar modelo de datos User | ✅ Completado | | Alta | 1.5 |
+| 2.2 | Implementar modelo de datos Shift | ✅ Completado | | Alta | 1.5 |
+| 2.3 | Implementar modelo de datos Payment | ✅ Completado | | Alta | 1.5 |
+| 2.4 | Configurar sistema de autenticación JWT | ✅ Completado | | Alta | 2.1 |
+| 2.5 | Implementar endpoints de registro/login/logut | ✅ Completado | | Alta | 2.4 |
+| 2.6 | Implementar CRUD de usuarios | 🔲 Pendiente | | Alta | 2.1 |
+| 2.7 | Implementar CRUD de turnos | 🔲 Pendiente | | Alta | 2.2 |
+| 2.8 | Implementar lógica de disponibilidad de turnos | 🔲 Pendiente | | Alta | 2.7 |
+| 2.9 | Implementar CRUD de pagos | 🔲 Pendiente | | Alta | 2.3 |
+| 2.10 | Implementar middleware de validación con Joi | 🔲 Pendiente | | Media | 2.5, 2.6, 2.7, 2.9 |
+| 2.11 | Configurar sistema de logging | ✅ Completado | | Media | 1.3 |
+| 2.12 | Implementar manejo de errores global | ✅ Completado | | Media | 2.10 |
+| 2.13 | [+] Implementar endpoints para estadísticas | 🔲 Pendiente | | Baja | 2.7, 2.9 |
 
-| ID | Descripción | Prioridad | Estado | Dependencias | Tiempo Estimado |
-|----|-------------|-----------|--------|--------------|-----------------|
-| 2.1 | Configurar modelo Shift en Sequelize | Alta | 🔲 Pendiente | - | 2h |
-| 2.2 | Crear ruta para obtener turnos disponibles por fecha | Alta | 🔲 Pendiente | 2.1 | 1h |
-| 2.3 | Implementar controlador para obtener turnos disponibles | Alta | 🔲 Pendiente | 2.2 | 2h |
-| 2.4 | Crear servicio shiftsService en frontend | Alta | 🔲 Pendiente | 2.3 | 2h |
-| 2.5 | Implementar componente ShiftCalendar | Alta | 🔲 Pendiente | - | 3h |
-| 2.6 | Implementar componente ShiftList | Alta | 🔲 Pendiente | - | 3h |
-| 2.7 | Implementar componente StatusBadge | Media | 🔲 Pendiente | - | 1h |
-| 2.8 | Crear página de selección de turnos | Alta | 🔲 Pendiente | 2.4, 2.5, 2.6 | 3h |
+## Fase 3: Desarrollo del Frontend
 
-**Punto de Verificación 2**: Usuario autenticado puede ver turnos disponibles por fecha y seleccionar uno.
+| ID | Tarea | Estado | Responsable | Prioridad | Dependencias |
+|----|-------|--------|-------------|-----------|--------------|
+| 3.1 | Configurar layout principal | ✅ Completado | | Alta | 1.4 |
+| 3.2 | Implementar componentes UI base | 🔲 Pendiente | | Alta | 3.1 |
+| 3.3 | Crear página de inicio | 🔲 Pendiente | | Alta | 3.2 |
+| 3.4 | Implementar formularios de registro/login | 🔲 Pendiente | | Alta | 3.2 |
+| 3.5 | Implementar servicio de autenticación | 🔲 Pendiente | | Alta | 3.4 |
+| 3.6 | Crear dashboard de administrador | 🔲 Pendiente | | Alta | 3.5 |
+| 3.7 | Crear dashboard de usuario | 🔲 Pendiente | | Alta | 3.5 |
+| 3.8 | Implementar calendario de turnos | 🔲 Pendiente | | Alta | 3.2 |
+| 3.9 | Implementar sistema de reserva de turnos | 🔲 Pendiente | | Alta | 3.8 |
+| 3.10 | Implementar gestión de perfil de usuario | 🔲 Pendiente | | Media | 3.5 |
+| 3.11 | Implementar interfaz de pagos | 🔲 Pendiente | | Alta | 3.9 |
+| 3.12 | Implementar sistema de notificaciones | 🔲 Pendiente | | Media | 3.5 |
+| 3.13 | [+] Implementar panel de estadísticas | 🔲 Pendiente | | Baja | 3.6 |
 
-## Fase 3: Reserva de Turno - Iniciación y Resumen
+## Fase 4: Integración y Pruebas
 
-| ID | Descripción | Prioridad | Estado | Dependencias | Tiempo Estimado |
-|----|-------------|-----------|--------|--------------|-----------------|
-| 3.1 | Crear ruta para iniciar reserva | Alta | 🔲 Pendiente | 2.1 | 2h |
-| 3.2 | Implementar controlador para iniciar reserva | Alta | 🔲 Pendiente | 3.1 | 3h |
-| 3.3 | Implementar generación del JWT de reserva | Alta | 🔲 Pendiente | 3.2 | 2h |
-| 3.4 | Crear servicio reservationService en frontend | Alta | 🔲 Pendiente | 3.3 | 2h |
-| 3.5 | Implementar store bookingStore para estado temporal | Media | 🔲 Pendiente | 3.4 | 2h |
-| 3.6 | Crear componente ReservationSummary | Alta | 🔲 Pendiente | - | 3h |
-| 3.7 | Implementar página de resumen de reserva | Alta | 🔲 Pendiente | 3.4, 3.6 | 3h |
-| 3.8 | [+] Implementar temporizador de expiración de reserva | Media | 🔲 Pendiente | 3.5 | 2h |
+| ID | Tarea | Estado | Responsable | Prioridad | Dependencias |
+|----|-------|--------|-------------|-----------|--------------|
+| 4.1 | Escribir pruebas unitarias para modelos | 🔲 Pendiente | | Alta | 2.1, 2.2, 2.3 |
+| 4.2 | Escribir pruebas unitarias para controladores | 🔲 Pendiente | | Alta | 2.5, 2.6, 2.7, 2.9 |
+| 4.3 | Escribir pruebas de integración para API | 🔲 Pendiente | | Alta | 2.12 |
+| 4.4 | Implementar pruebas E2E para flujos principales | 🔲 Pendiente | | Media | 3.9, 3.11 |
+| 4.5 | Realizar pruebas de rendimiento | 🔲 Pendiente | | Media | 4.3 |
+| 4.6 | Realizar auditoría de seguridad | 🔲 Pendiente | | Alta | 4.3 |
+| 4.7 | Depurar y corregir problemas identificados | 🔲 Pendiente | | Alta | 4.1, 4.2, 4.3, 4.4, 4.5, 4.6 |
 
-**Punto de Verificación 3**: Usuario puede seleccionar turno y ver resumen con temporizador de expiración.
+## Fase 5: Despliegue y Operaciones
 
-## Fase 4: Proceso de Pago
+| ID | Tarea | Estado | Responsable | Prioridad | Dependencias |
+|----|-------|--------|-------------|-----------|--------------|
+| 5.1 | Configurar entorno de producción para backend | 🔲 Pendiente | | Alta | 4.7 |
+| 5.2 | Configurar entorno de producción para frontend | 🔲 Pendiente | | Alta | 4.7 |
+| 5.3 | Implementar pipeline CI/CD | 🔲 Pendiente | | Media | 5.1, 5.2 |
+| 5.4 | Configurar monitoreo de aplicación | 🔲 Pendiente | | Media | 5.1, 5.2 |
+| 5.5 | Elaborar documentación técnica | 🔲 Pendiente | | Media | 4.7 |
+| 5.6 | Elaborar manual de usuario | 🔲 Pendiente | | Media | 3.13 |
+| 5.7 | Realizar despliegue final | 🔲 Pendiente | | Alta | 5.1, 5.2, 5.3, 5.4, 5.5, 5.6 |
+| 5.8 | [+] Configurar sistema de copias de seguridad | 🔲 Pendiente | | Media | 5.7 |
 
-| ID | Descripción | Prioridad | Estado | Dependencias | Tiempo Estimado |
-|----|-------------|-----------|--------|--------------|-----------------|
-| 4.1 | Configurar modelo Payment en Sequelize | Alta | 🔲 Pendiente | - | 2h |
-| 4.2 | Configurar modelo Reservation en Sequelize | Alta | 🔲 Pendiente | 4.1 | 2h |
-| 4.3 | Crear ruta para procesar pagos | Alta | 🔲 Pendiente | 4.1, 4.2 | 2h |
-| 4.4 | Implementar controlador de procesamiento de pagos | Alta | 🔲 Pendiente | 4.3 | 4h |
-| 4.5 | Crear servicio paymentService para frontend | Alta | 🔲 Pendiente | 4.4 | 2h |
-| 4.6 | Implementar componente PaymentForm | Alta | 🔲 Pendiente | - | 3h |
-| 4.7 | Implementar componente PaymentMethodSelector | Alta | 🔲 Pendiente | - | 2h |
-| 4.8 | Crear formularios para diferentes métodos de pago | Media | 🔲 Pendiente | 4.7 | 4h |
-| 4.9 | Implementar página de pago | Alta | 🔲 Pendiente | 4.5, 4.6 | 3h |
-| 4.10 | [+] Implementar validación en tiempo real para datos de pago | Media | 🔲 Pendiente | 4.8 | 3h |
+## Tareas Específicas de Funcionalidades Clave
 
-**Punto de Verificación 4**: Usuario puede completar el proceso de pago con diferentes métodos.
+### Gestión de Turnos
 
-## Fase 5: Confirmación de Pago
+| ID | Tarea | Estado | Responsable | Prioridad | Dependencias |
+|----|-------|--------|-------------|-----------|--------------|
+| T.1 | Diseñar algoritmo de disponibilidad de turnos | 🔲 Pendiente | | Alta | 2.2 |
+| T.2 | Implementar bloqueo de franjas horarias | 🔲 Pendiente | | Media | 2.8 |
+| T.3 | Implementar sistema de cancelación/reprogramación | 🔲 Pendiente | | Alta | 2.8, 3.9 |
+| T.4 | Implementar recordatorios de turnos | 🔲 Pendiente | | Media | 3.12 |
 
-| ID | Descripción | Prioridad | Estado | Dependencias | Tiempo Estimado |
-|----|-------------|-----------|--------|--------------|-----------------|
-| 5.1 | Crear ruta para obtener detalles de confirmación | Alta | 🔲 Pendiente | 4.2 | 2h |
-| 5.2 | Implementar controlador de confirmación | Alta | 🔲 Pendiente | 5.1 | 2h |
-| 5.3 | Actualizar servicio reservationService en frontend | Media | 🔲 Pendiente | 5.2 | 1h |
-| 5.4 | Implementar componente PaymentConfirmation | Alta | 🔲 Pendiente | - | 2h |
-| 5.5 | Crear página de confirmación de pago | Alta | 🔲 Pendiente | 5.3, 5.4 | 2h |
-| 5.6 | [+] Implementar generación de comprobantes en PDF | Baja | 🔲 Pendiente | 5.5 | 4h |
+### Sistema de Pagos
 
-**Punto de Verificación 5**: Usuario recibe confirmación clara y detallada después del pago.
-
-## Fase 6: Visualización de "Mis Citas"
-
-| ID | Descripción | Prioridad | Estado | Dependencias | Tiempo Estimado |
-|----|-------------|-----------|--------|--------------|-----------------|
-| 6.1 | Crear ruta para obtener citas del usuario | Alta | 🔲 Pendiente | 4.2 | 2h |
-| 6.2 | Implementar controlador para listar citas | Alta | 🔲 Pendiente | 6.1 | 2h |
-| 6.3 | Actualizar servicio reservationService en frontend | Media | 🔲 Pendiente | 6.2 | 1h |
-| 6.4 | Implementar componente ReservationHistory | Alta | 🔲 Pendiente | - | 3h |
-| 6.5 | Crear página de "Mis Citas" | Alta | 🔲 Pendiente | 6.3, 6.4 | 3h |
-| 6.6 | [+] Implementar filtros y ordenamiento de citas | Media | 🔲 Pendiente | 6.5 | 2h |
-| 6.7 | [+] Agregar funcionalidad de cancelación de citas | Media | 🔲 Pendiente | 6.5 | 3h |
-
-**Punto de Verificación 6**: Usuario puede ver, filtrar y gestionar su historial de citas.
-
-## Tareas Complementarias y Mejoras
-
-| ID | Descripción | Prioridad | Estado | Dependencias | Tiempo Estimado |
-|----|-------------|-----------|--------|--------------|-----------------|
-| C.1 | Implementar manejo de errores robusto en backend | Alta | 🔲 Pendiente | - | 4h |
-| C.2 | Implementar notificaciones amigables en frontend | Media | 🔲 Pendiente | - | 3h |
-| C.3 | Configurar validación con Joi en backend | Alta | 🔲 Pendiente | - | 3h |
-| C.4 | Implementar validación en frontend | Media | 🔲 Pendiente | - | 3h |
-| C.5 | Establecer variables de entorno con dotenv | Alta | 🔲 Pendiente | - | 1h |
-| C.6 | Configurar ESLint y Prettier | Media | 🔲 Pendiente | - | 2h |
-| C.7 | Implementar pruebas unitarias básicas | Baja | 🔲 Pendiente | - | 5h |
-| C.8 | Optimizar rendimiento de componentes | Baja | 🔲 Pendiente | - | 4h |
-| C.9 | Implementar modo oscuro/claro | Baja | 🔲 Pendiente | - | 3h |
-| C.10 | Mejorar accesibilidad (ARIA, contraste) | Media | 🔲 Pendiente | - | 3h |
-
-## Orden Lógico de Implementación Recomendado
-
-1. Fase 1: Autenticación (tareas 1.1 - 1.14)
-2. Tareas C.1, C.3, C.5, C.6 (configuración básica)
-3. Fase 2: Visualización de Turnos (tareas 2.1 - 2.8)
-4. Fase 3: Reserva Inicial (tareas 3.1 - 3.8)
-5. Fase 4: Proceso de Pago (tareas 4.1 - 4.10)
-6. Fase 5: Confirmación (tareas 5.1 - 5.5)
-7. Fase 6: Mis Citas (tareas 6.1 - 6.5)
-8. Tareas opcionales por prioridad (restante de C y opcionales marcadas con [+])
-
-**Nota**: Esta tabla será actualizada conforme avance el desarrollo. Las estimaciones de tiempo son aproximadas y pueden ajustarse según el progreso real.
+| ID | Tarea | Estado | Responsable | Prioridad | Dependencias |
+|----|-------|--------|-------------|-----------|--------------|
+| P.1 | Configurar integración con pasarela de pagos | 🔲 Pendiente | | Alta | 2.9, 3.11 |
+| P.2 | Implementar proceso de pago | 🔲 Pendiente | | Alta | P.1 |
+| P.3 | Implementar sistema de facturación | 🔲 Pendiente | | Media | P.2 |
+| P.4 | Implementar reembolsos | 🔲 Pendiente | | Media | P.2 |
