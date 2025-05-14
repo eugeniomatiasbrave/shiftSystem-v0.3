@@ -26,15 +26,15 @@
 | 2.2 | Implementar modelo de datos Shift | ✅ Completado | | Alta | 1.5 |
 | 2.3 | Implementar modelo de datos Payment | ✅ Completado | | Alta | 1.5 |
 | 2.4 | Configurar sistema de autenticación JWT | ✅ Completado | | Alta | 2.1 |
-| 2.5 | Implementar endpoints de registro/login/logut | ✅ Completado | | Alta | 2.4 |
-| 2.6 | Implementar CRUD de usuarios | 🔲 Pendiente | | Alta | 2.1 |
-| 2.7 | Implementar CRUD de turnos | 🔲 Pendiente | | Alta | 2.2 |
-| 2.8 | Implementar lógica de disponibilidad de turnos | 🔲 Pendiente | | Alta | 2.7 |
-| 2.9 | Implementar CRUD de pagos | 🔲 Pendiente | | Alta | 2.3 |
-| 2.10 | Implementar middleware de validación con Joi | 🔲 Pendiente | | Media | 2.5, 2.6, 2.7, 2.9 |
+| 2.5 | Implementar endpoints de registro/login | ✅ Completado | | Alta | 2.4 |
+| 2.6 | Implementar CRUD de usuarios | ✅ Completado | | Alta | 2.1 |
+| 2.7 | Implementar CRUD de turnos | ✅ Completado | | Alta | 2.2 |
+| 2.8 | Implementar lógica de disponibilidad de turnos | ✅ Completado | | Alta | 2.7 |
+| 2.9 | Implementar CRUD de pagos | ✅ Completado | | Alta | 2.3 |
+| 2.10 | Implementar middleware de validación con Joi | ✅ Completado | | Media | 2.5, 2.6, 2.7, 2.9 |
 | 2.11 | Configurar sistema de logging | ✅ Completado | | Media | 1.3 |
 | 2.12 | Implementar manejo de errores global | ✅ Completado | | Media | 2.10 |
-| 2.13 | [+] Implementar endpoints para estadísticas | 🔲 Pendiente | | Baja | 2.7, 2.9 |
+| 2.13 | [+] Implementar endpoints para estadísticas | ✅ Completado | | Baja | 2.7, 2.9 |
 
 ## Fase 3: Desarrollo del Frontend
 
@@ -98,3 +98,9 @@
 | P.2 | Implementar proceso de pago | 🔲 Pendiente | | Alta | P.1 |
 | P.3 | Implementar sistema de facturación | 🔲 Pendiente | | Media | P.2 |
 | P.4 | Implementar reembolsos | 🔲 Pendiente | | Media | P.2 |
+
+### Refactorizar
+
+## ¿Que consultas deberían Ser Hechas en el Backend y cuales en el fronend para evitar sobrecargar al servidor y mejorar la experiencia del ususario?
+
+Encontrar un equilibrio entre la carga en el servidor y la experiencia del usuario. Las consultas que requieren datos actualizados o que involucran lógica de negocio compleja deben ser manejadas en el backend, mientras que las interacciones simples y los filtros sobre datos ya disponibles pueden ser manejados en el frontend para mejorar la eficiencia y la experiencia del usuario.

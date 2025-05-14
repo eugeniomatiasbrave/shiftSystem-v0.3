@@ -1,53 +1,101 @@
-
-/*
 import Joi from "joi";
 
+// Esquema para validación de registro de usuarios
 const registerSchema = Joi.object({
   firstName: Joi.string().min(3).max(20).required(),
   lastName: Joi.string().min(3).max(20).required(),
-  email: Joi.string().email(),
-  password: Joi.string().alphanum().min(3).max(30), // cambiar luego el minimo por seguridad a la hora de aplicar en produccion.
+  email: Joi.string().email().required(),
+  password: Joi.string().min(8).max(30).required(),
+  role: Joi.string().valid('user', 'admin').default('user'),
+  phone: Joi.string().pattern(/^\d{10}$/).optional()
 });
 
 export const userValidator = (req, res, next) => {
   const { error } = registerSchema.validate(req.body, { abortEarly: false });
   if (error) {
-    console.error("Validation error:", error.details);
-    return res.status(400).send(error);
+    const errors = error.details.map(err => ({
+      field: err.path[0],
+      message: err.message
+    }));
+    return res.status(400).json({ status: 'error', errors });
   }
   next();
 };
 
+// Esquema para validación de login
 const loginSchema = Joi.object({
-  email: Joi.string().email(),
-  password: Joi.string().alphanum().min(3).max(30),
+  email: Joi.string().email().required(),
+  password: Joi.string().min(3).max(30).required(),
 });
 
 export const loginValidator = (req, res, next) => {
   const { error } = loginSchema.validate(req.body, { abortEarly: false });
   if (error) {
-    console.error("Validation error:", error.details);
-    return res.status(400, "Validation error:", error.details);
+    const errors = error.details.map(err => ({
+      field: err.path[0],
+      message: err.message
+    }));
+    return res.status(400).json({ status: 'error', errors });
   }
   next();
 };
 
+// Esquema para validación de turnos
 const shiftSchema = Joi.object({
   id_user: Joi.number().optional(),
   date: Joi.date().required(),
   time: Joi.string().required(),
   status: Joi.string()
-    .valid("available", "reserved", "canceled")
+    .valid("available", "reserved", "canceled", "completed")
     .default("available"),
+  notes: Joi.string().max(500).optional()
 });
 
 export const shiftValidator = (req, res, next) => {
   const { error } = shiftSchema.validate(req.body, { abortEarly: false });
   if (error) {
-    console.error("Validation error:", error.details);
-    return res.status(400).send(error);
+    const errors = error.details.map(err => ({
+      field: err.path[0],
+      message: err.message
+    }));
+    return res.status(400).json({ status: 'error', errors });
   }
   next();
 };
 
-*/
+// Esquema para validación de pagos
+const paymentSchema = Joi.object({
+  id_shift: Joi.number().required(),
+  id_user: Joi.number().required(), 
+  amount: Joi.number().positive().required(),
+  status: Joi.string()
+    .valid("pending", "completed", "failed", "refunded")
+    .default("pending"),
+  payment_method: Joi.string().valid("credit_card", "debit_card", "transfer", "cash").required(),
+  payment_date: Joi.date().default(Date.now)
+});
+
+export const paymentValidator = (req, res, next) => {
+  const { error } = paymentSchema.validate(req.body, { abortEarly: false });
+  if (error) {
+    const errors = error.details.map(err => ({
+      field: err.path[0],
+      message: err.message
+    }));
+    return res.status(400).json({ status: 'error', errors });
+  }
+  next();
+};
+
+// Middleware genérico para validación con esquema personalizado
+export const validateWithSchema = (schema) => (req, res, next) => {
+  const { error } = schema.validate(req.body, { abortEarly: false });
+  if (error) {
+    const errors = error.details.map(err => ({
+      field: err.path[0],
+      message: err.message
+    }));
+    return res.status(400).json({ status: 'error', errors });
+  }
+  next();
+};

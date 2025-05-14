@@ -269,6 +269,58 @@ const getShiftWithPayment = async (req, res, next) => {
   }
 };
 
+// Función para obtener la disponibilidad de turnos por fecha
+const getAvailability = async (req, res) => {
+  try {
+    const { date } = req.params;
+    
+    // Validar formato de fecha
+    if (!date || !date.match(/^\d{4}-\d{2}-\d{2}$/)) {
+      return res.status(400).json({
+        status: 'error',
+        message: 'Formato de fecha inválido. Use YYYY-MM-DD'
+      });
+    }
+    
+    // Obtener todos los turnos para esa fecha
+    const shifts = await shiftsServices.getShiftsByDate(date);
+    
+    // Definir los horarios posibles (por ejemplo, de 8:00 a 18:00 cada hora)
+    const possibleHours = [];
+    for (let hour = 8; hour <= 18; hour++) {
+      possibleHours.push(`${hour.toString().padStart(2, '0')}:00`);
+    }
+    
+    // Crear un objeto con la disponibilidad para cada hora
+    const availability = possibleHours.map(hour => {
+      const isAvailable = !shifts.some(
+        shift => shift.time === hour && shift.status !== 'available'
+      );
+      
+      return {
+        time: hour,
+        available: isAvailable,
+        reserved: shifts.some(
+          shift => shift.time === hour && shift.status === 'reserved'
+        )
+      };
+    });
+    
+    return res.status(200).json({
+      status: 'success',
+      date,
+      availability
+    });
+  } catch (error) {
+    req.logger.error(error);
+    return res.status(500).json({
+      status: 'error',
+      message: 'Error al verificar disponibilidad de turnos',
+      error: error.message
+    });
+  }
+};
+
 export default {
   // export an object with all the methods
   getShifts,
@@ -282,7 +334,8 @@ export default {
   updateShiftStatus,
   rescheduleShift,
   deleteShift,
-  getShiftWithPayment
+  getShiftWithPayment,
+  getAvailability
 };
 
 // MEJORA DEL MODELO DE TURNOS:
