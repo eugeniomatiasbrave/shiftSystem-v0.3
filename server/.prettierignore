@@ -1,0 +1,6 @@
+node_modules/
+dist/
+build/
+logs/
+performance/
+package-lock.json 

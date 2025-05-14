@@ -2,6 +2,7 @@
 	import "../app.css";
 	import Swal from 'sweetalert2';
 	import Header from '$lib/components/common/Header.svelte';
+	import Footer from '$lib/components/common/Footer.svelte';
 
 	export let data;
 
@@ -29,3 +30,5 @@
 <div class="container mx-auto">
 	<slot />
 </div>
+
+<Footer />

@@ -15,8 +15,8 @@
 | 1.3 | Crear estructura de directorios backend | ✅ Completado | | Alta | 1.2 |
 | 1.4 | Crear estructura de directorios frontend | ✅ Completado | | Alta | 1.2 |
 | 1.5 | Configurar conexión a base de datos MySQL | ✅ Completado | | Alta | 1.3 |
-| 1.6 | Configurar ESLint y Prettier | 🔲 Pendiente | | Media | 1.3, 1.4 |
-| 1.7 | Configurar herramientas de testing | 🔲 Pendiente | | Media | 1.3, 1.4 |
+| 1.6 | Configurar ESLint y Prettier | ✅ Completado | | Media | 1.3, 1.4 |
+| 1.7 | Configurar herramientas de testing | ✅ Completado | | Media | 1.3, 1.4 |
 
 ## Fase 2: Desarrollo del Backend
 
