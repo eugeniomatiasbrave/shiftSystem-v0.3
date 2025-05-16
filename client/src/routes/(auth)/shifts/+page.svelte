@@ -55,7 +55,7 @@
 
 <div class="mx-auto bg-white p-5 rounded-lg shadow-md mt-16">
 	<BackButton></BackButton>
-	<form method="POST"  action="?/reserve" class="mt-3">
+	<div class="mt-3">
 		<ShiftCalendar bind:selectedDate on:dateChange={handleDateChange} />
 		<h2 class="text-3xl font-bold text-center mt-4 mb-2">Turnos disponibles</h2>
 		<!-- Hidden input to send selectedShiftId with the form -->
@@ -63,12 +63,11 @@
 		<ShiftList shifts={filteredShifts} on:shiftSelected={handleShiftSelected} />
 		<div class="flex-auto">
 			<div class="mt-3 form-control">
-				<button type="submit" class="btn btn-info" disabled={!selectedShiftId}>Reserve</button>
-			 <a href="/shifts/booking" class="btn btn-info">Booking</a>
+				<a href={`/shifts/${selectedShiftId}`} class="btn btn-info" >Reserve</a>
 			</div>
 			<div class="mt-3 form-control">
 				<a href="/shifts/my-appointments" class="btn btn-secondary">Volver</a>
 			</div>
 		</div>
-	</form>
+	</div>
 </div>

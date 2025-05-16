@@ -38,21 +38,41 @@
 
 ## Fase 3: Desarrollo del Frontend
 
+### Tareas Comunes (Administrador y Usuario)
+
 | ID | Tarea | Estado | Responsable | Prioridad | Dependencias |
 |----|-------|--------|-------------|-----------|--------------|
 | 3.1 | Configurar layout principal | ✅ Completado | | Alta | 1.4 |
-| 3.2 | Implementar componentes UI base | 🔲 Pendiente | | Alta | 3.1 |
-| 3.3 | Crear página de inicio | 🔲 Pendiente | | Alta | 3.2 |
-| 3.4 | Implementar formularios de registro/login | 🔲 Pendiente | | Alta | 3.2 |
-| 3.5 | Implementar servicio de autenticación | 🔲 Pendiente | | Alta | 3.4 |
+| 3.3 | Crear página de inicio | ✅ Completado | | Alta | 3.2 |
+| 3.4 | Implementar formularios de registro/login | ✅ Completado | | Alta | 3.2 |
+| 3.8 | Implementar calendario de turnos | ✅ Completado | | Alta | 3.2 |
+| 3.12 | Implementar sistema de notificaciones | 🔲 Pendiente | | Media | 3.5 |
+| 3.14 | Implementar estructura base de /(auth)/shift | 🔲 Pendiente | | Alta | 3.5, 3.8 |
+| 3.15 | Implementar estructura base de /(auth)/payments | 🔲 Pendiente | | Alta | 3.5 |
+
+### Tareas Específicas del Administrador
+
+| ID | Tarea | Estado | Responsable | Prioridad | Dependencias |
+|----|-------|--------|-------------|-----------|--------------|
 | 3.6 | Crear dashboard de administrador | 🔲 Pendiente | | Alta | 3.5 |
+| 3.13 | [+] Implementar panel de estadísticas | 🔲 Pendiente | | Baja | 3.6 |
+| 3.16 | Desarrollar interfaz de gestión de turnos en /(auth)/shift | 🔲 Pendiente | | Alta | 3.14 |
+| 3.17 | Crear vista de asignación de turnos a empleados | 🔲 Pendiente | | Media | 3.16 |
+| 3.18 | Implementar dashboard de gestión de pagos en /(auth)/payments | 🔲 Pendiente | | Alta | 3.15 |
+| 3.19 | Desarrollar informes financieros en /(auth)/payments | 🔲 Pendiente | | Media | 3.18 |
+
+### Tareas Específicas del Usuario
+
+| ID | Tarea | Estado | Responsable | Prioridad | Dependencias |
+|----|-------|--------|-------------|-----------|--------------|
 | 3.7 | Crear dashboard de usuario | 🔲 Pendiente | | Alta | 3.5 |
-| 3.8 | Implementar calendario de turnos | 🔲 Pendiente | | Alta | 3.2 |
 | 3.9 | Implementar sistema de reserva de turnos | 🔲 Pendiente | | Alta | 3.8 |
 | 3.10 | Implementar gestión de perfil de usuario | 🔲 Pendiente | | Media | 3.5 |
 | 3.11 | Implementar interfaz de pagos | 🔲 Pendiente | | Alta | 3.9 |
-| 3.12 | Implementar sistema de notificaciones | 🔲 Pendiente | | Media | 3.5 |
-| 3.13 | [+] Implementar panel de estadísticas | 🔲 Pendiente | | Baja | 3.6 |
+| 3.20 | Desarrollar interfaz de reserva de turnos en /(auth)/shift | 🔲 Pendiente | | Alta | 3.14, 3.9 |
+| 3.21 | Implementar visualización de turnos reservados en /(auth)/shift | 🔲 Pendiente | | Media | 3.20 |
+| 3.22 | Crear historial de pagos de usuario en /(auth)/payments | 🔲 Pendiente | | Alta | 3.15, 3.11 |
+| 3.23 | Implementar proceso de pago para turnos en /(auth)/payments | 🔲 Pendiente | | Alta | 3.22, 3.20 |
 
 ## Fase 4: Integración y Pruebas
 

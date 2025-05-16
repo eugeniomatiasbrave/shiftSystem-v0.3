@@ -15,7 +15,6 @@ client/
 │   │   │   │   └── StatusBadge.svelte     # Badge de estado
 │   │   │   ├── shifts/            # Componentes para la gestión de turnos/citas
 │   │   │   │   ├── ShiftCalendar.svelte        # Calendario interactivo con flatpickr
-│   │   │   │   ├── ShiftDetiles.svelte       # Tarjeta para mostrar información de turno
 │   │   │   │   ├── ShiftList.svelte       # Lista de turnos programados
 │   │   │   │   └── ShiftReschedule.svelte # Componente para reprogramar citas
 │   │   │   ├── payment/           # Componentes relacionados con pagos
@@ -28,13 +27,6 @@ client/
 │   │   │   │       ├── CreditCardForm.svelte # Formulario de pago con tarjeta de crédito
 │   │   │   │       ├── PayPalForm.svelte # Formulario de pago con PayPal
 │   │   │   │       └── MercadoPagoForm.svelte # Formulario de pago con Mercado Pago
-│   │   │   └── ui/                # Elementos UI reutilizables con DaisyUI
-│   │   │       ├── Button.svelte          # Botones personalizados
-│   │   │       ├── Modal.svelte           # Ventanas modales
-│   │   │       ├── Input.svelte           # Campos de entrada
-│   │   │       ├── Spinner.svelte         # Indicador de carga
-│   │   │       ├── Card.svelte            # Componente tarjeta
-│   │   │       └── Alert.svelte           # Alertas y notificaciones (SweetAlert2)
 │   │   ├── stores/                # Estado global con Svelte stores
 │   │   │   ├── auth.js                    # Estado de autenticación y JWT
 │   │   │   ├── shifts.js                  # Estado de turnos/citas
@@ -90,15 +82,19 @@ client/
 │   │   │   ├── dashboard/
 │   │   │   │   ├── +page.svelte           # UI del dashboard
 │   │   │   │   └── +page.server.js        # Carga datos de estadísticas y resumen
+│   │   │   ├── users/
+│   │   │   │   ├── +page.svelte           # UI de gestión de usuarios
+│   │   │   │   └── +page.server.js        # Carga y guarda usuarios
 │   │   │   ├── calendar/
 │   │   │   │   ├── +page.svelte           # UI de gestión del calendario
 │   │   │   │   └── +page.server.js        # Carga y guarda disponibilidad
-│   │   │   └── shifts/
-│   │   │       ├── +page.svelte           # UI de gestión de turnos
-│   │   │       ├── +page.server.js        # Carga turnos y maneja acciones
-│   │   │       └─── [id]/                  # Detalle de turno específico
-│   │   │            ├── +page.svelte       # UI del detalle del turno
-│   │   │            └── +page.server.js    # Carga dato específico del turno
+│   │   │   ├── adminShifts/
+│   │   │   │   ├── +page.svelte           # UI de gestión de turnos
+│   │   │   │   ├── +page.server.js        # Carga turnos y maneja acciones
+│   │   │   │   └─── [id]/                  # Detalle de turno específico
+│   │   │   │       ├── +page.svelte       # UI del detalle del turno
+│   │   │   │       └── +page.server.js    # Carga dato específico del turno
+│   │   │   └── +layout.svelte             # Layout para la sección de administración 
 │   │   ├── login/
 │   │   │   ├── +page.svelte               # Formulario de login
 │   │   │   └── +page.server.js            # Procesa el login (usando JWT)
