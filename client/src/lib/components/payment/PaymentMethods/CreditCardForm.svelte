@@ -1,1 +1,0 @@
-<!-- Formulario específico para tarjetas de crédito --> 

@@ -1,4 +1,4 @@
-// Lógica del servidor para turnosimport { fail } from "@sveltejs/kit";
+// Lógica del servidor para turnos
 
 import axios from 'axios';
 const API_URL = process.env.VITE_API_URL;

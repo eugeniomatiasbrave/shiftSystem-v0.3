@@ -1,47 +1,59 @@
-// Procesa la reserva del turno//obtener las cookies del usuario
-import { fail } from "@sveltejs/kit";
+import { fail, redirect } from "@sveltejs/kit";
 import axios from 'axios';
+
 const API_URL = process.env.VITE_API_URL;
 
-export const load = async ({ params, locals }) => {
+export const load = async ({ params, locals, url }) => {
     const id_shift = params.id;
-
+    let token = locals.user?.token;
+    
+    // Verificar si hay un indicador de redirección después de una reserva exitosa
+    const reserved = url.searchParams.get('reserved');
+    
     try {
         const response = await axios.get(`${API_URL}/shifts/${id_shift}`, {
             headers: {
-                Authorization: `Bearer ${locals.user.token}`
+                Authorization: `Bearer ${token}`
             }
         });
-
-        return {
-            shiftId: response.data.data
-        };
-    }
-    catch (error) {
-        console.error("Error fetching shift:", error);
-        return fail(500, { error: 'An unexpected error occurred. Please try again later.' });
-    }
-};
-
-
-export const actions = {
-    reserve: async ({ request, locals }) => {
-        const formData = await request.formData();
-        const id_user = locals.user.id_user;
-        const id_shift = formData.get("id_shift");
-
-        // Validate input
-        if (!id_shift) {
-            return fail(400, { error: 'Please select an appointment to reserve' });
+        
+        const shiftData = response.data.data;
+        
+        // Si el turno está reservado y venimos de una acción de reserva, redirigir a la página de pago
+        if (reserved === 'true' && shiftData && shiftData.status === 'reserved') {
+            throw redirect(303, `/shifts/${id_shift}/payment`);
         }
 
-        // Prepare request body
+        return {
+            shiftId: shiftData
+        };
+    } catch (error) {
+        // Si es una redirección, pasarla hacia arriba
+        if (error.status === 303) {
+            throw error;
+        }
+        
+        console.error("Error loading shift:", error);
+        return {
+            error: error.response?.data?.message || 'Error al cargar el turno. Por favor, inténtalo nuevamente.'
+        };
+    }
+}
+
+
+// Procesa la reserva del turno
+
+export const actions = {
+    default: async ({ request, locals }) => {
+        const formData = await request.formData();
+        const id_shift = formData.get('id_shift');
+        const id_user = locals.user.id_user;
+         
+
         const body = { 
             id_user: Number(id_user), 
             id_shift: Number(id_shift)
         };
-
-        console.log("Request body:", body);
         
         // Get token from locals or cookie
         let token = locals.user?.token;
@@ -62,50 +74,37 @@ export const actions = {
         }
 
         try {
-            // Send reservation request to API
-            const response = await axios.put(
-                `${API_URL}/shifts/reserve/${id_shift}`,
+            // Si aquí sólo quieres reservar temporalmente (pre-reserva)
+            const response = await axios.post(
+                `${API_URL}/shifts/${id_shift}/reserve`, 
                 body,
                 {
                     headers: {
-                        'Content-Type': 'application/json',
                         Authorization: `Bearer ${token}`
                     }
                 }
             );
-       
-            if (response.status !== 200) {
-                return fail(response.status, { 
-                    error: response.data.message || 'Error reserving the appointment' 
-                });
-            }
-    
-            return { 
-                success: true,
-                message: 'Appointment reserved successfully',
-                updatedUser: response.data 
-            };
-        }
-        catch (error) {
-            console.error("Error reserving appointment:", error);
 
-            // Handle specific error cases
-            if (error.response?.status === 409) {
-                return fail(409, { error: 'This appointment is no longer available' });
+            // Si la reserva es exitosa, redirigir a la página de pago
+            if (response.data.success) {
+                throw redirect(303, `/shifts/${id_shift}/payment`);
+            }
+        
+            return {
+                success: true,
+                data: response.data.data || []
+            };
+
+        } catch (error) {
+            // Si es una redirección, pasarla hacia arriba
+            if (error.status === 303) {
+                throw error;
             }
             
-            if (error.response?.status === 403) {
-                return fail(403, { error: 'You are not authorized to reserve this appointment' });
-            }
-            
-            if (error.response) {
-                return fail(error.response.status || 500, { 
-                    error: error.response.data?.message || 'Error reserving the appointment',
-                    details: error.response.data
-                });
-            }
-            
-            return fail(500, { error: 'An unexpected error occurred. Please try again later.' });
+            console.error("Error reserving shift:", error);
+            return fail(500, { 
+                error: error.response?.data?.message || 'Error al reservar el turno. Inténtalo nuevamente.'
+            });
         }
     }
 };

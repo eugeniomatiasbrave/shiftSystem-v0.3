@@ -1,1 +1,0 @@
-<!-- Formulario para otros métodos de pago --> 

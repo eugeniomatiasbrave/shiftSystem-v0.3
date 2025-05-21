@@ -1,1 +1,0 @@
-<!-- Formulario para transferencias bancarias --> 

@@ -1,1 +1,0 @@
-<!-- Selector de método de pago (tarjeta de credito, debito, etc.) --> 
