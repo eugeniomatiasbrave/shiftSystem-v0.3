@@ -15,6 +15,9 @@ class ShiftsRouter extends BaseRouter {
         // GET /api/shifts/:id_shift - Obtener turno por ID
         this.get('/:id_shift', ['PUBLIC', 'USER'], passportCall('current'), shiftController.getShiftById);
         
+        //PUT api/shifts/:id_shift/reserve - Reservar turno
+        this.put('/:id_shift/reserve', ['PUBLIC', 'USER'], passportCall('current'), shiftController.reserveShift);
+
         // GET /api/shifts/:id_shift/payment - Obtener turno con su pago
         this.get('/:id_shift/payment', ['PUBLIC', 'USER'], passportCall('current'), shiftController.getShiftWithPayment);
         
@@ -27,8 +30,7 @@ class ShiftsRouter extends BaseRouter {
         // PUT /api/shifts/:id_shift - Actualizar turno
         this.put('/:id_shift', ['ADMIN'], passportCall('current'), shiftValidator, shiftController.updateShift);
         
-        // PUT /api/shifts/reserve/:id_shift - Reservar turno
-        this.put('/reserve/:id_shift', ['PUBLIC', 'USER'], passportCall('current'), shiftController.reserveShift);
+       
         
         // PUT /api/shifts/cancel/:id_shift - Cancelar turno
         this.put('/cancel/:id_shift', ['PUBLIC', 'USER'], passportCall('current'), shiftController.cancelShift);

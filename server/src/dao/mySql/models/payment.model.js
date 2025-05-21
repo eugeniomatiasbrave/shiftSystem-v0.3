@@ -31,8 +31,12 @@ export const PaymentModel = db.define("payments", {
     allowNull: false,
   },
   payment_status: { 
-    type: DataTypes.ENUM("pending", "completed", "failed", "refunded"), 
-    defaultValue: "pending", 
+    type: DataTypes.ENUM("pending_payment", "completed", "failed", "refunded"), 
+    defaultValue: "pending_payment", 
+  },
+  payment_date: { 
+    type: DataTypes.DATE,
+    allowNull: true,
   },
   transaction_id: { 
     type: DataTypes.STRING,

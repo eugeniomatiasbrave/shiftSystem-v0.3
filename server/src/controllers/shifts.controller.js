@@ -26,31 +26,29 @@ const getShiftsByUser = async (req, res, next) => {
   }
 };
 
-// /api/shifts/reserve/:id_shift; Reservar un turno...ok
+// /api/shifts/:id_shift/reserve; Reservar un turno
 const reserveShift = async (req, res, next) => {
   try {
-    const { id_shift } = req.params; // ID del turno a reservar
-    const { id_user } = req.body; // ID del usuario que reserva el turno
+    const { id_shift } = req.params;
+    const { id_user } = req.body;
 
-    // Verificar que el turno existe y está disponible
+    // Verificar que el turno existe
     const shift = await shiftsServices.getShiftById(id_shift);
     if (!shift) {
-      logger.warn(`Shift with id_shift ${id_shift} not found`);
-      throw new BadRequestError("Shift not found");
+      throw new NotFoundError("Shift not found");
     }
-    // Verificar que el turno está disponible
+
+    // Verificar que el turno esté disponible
     if (shift.status !== "available") {
-      logger.warn(`Shift with id_shift ${id_shift} is not available`);
       throw new BadRequestError("Shift is not available for reservation");
     }
 
-    const updatedShift = {
-      id_user,
-      status: "reserved",
-    };
-    const result = await shiftsServices.updateShift(id_shift, updatedShift);
-
-    HttpRes.Success(res, result); // Respuesta exitosa
+    // Actualizar el estado del turno a "pending_payment" y asignar el usuario
+    const result = await shiftsServices.reserveShift(id_shift, id_user);
+    
+    // Obtener el turno actualizado para la respuesta
+    const updatedShift = await shiftsServices.getShiftById(id_shift);
+    HttpRes.Success(res, updatedShift);
   } catch (error) {
     logger.error("Error reserving shift:", error);
     next(error);
@@ -337,22 +335,3 @@ export default {
   getShiftWithPayment,
   getAvailability
 };
-
-// MEJORA DEL MODELO DE TURNOS:
-
-// Reglas para cancelacion de turnos:
-// 1. Los turno no pueden cancelarse si se encuentran dentro de las 24 horas de la fecha y hora del turno.
-// 2. Los turnos pueden cancelarse si se encuentran fuera de las 24 horas de la fecha y hora del turno, y se les asigna nuevamente el estado de "available".
-
-// Pago de turnos:
-// 1. Se puede implementar un sistema de pago para los turnos reservados, donde el usuario debe pagar una tarifa para confirmar la reserva.
-
-
-// Historial de turnos:
-// 1. Se guardan los turnos cancelados para llevar un registro de los mismos.
-// 2. Se guardan los turnos reservados para llevar un registro de los mismos.
-
-// Notificaciones:
-// 1. Se envian notificaciones por email al usuario cuando se reserva un turno.
-// 2. Se envian notificaciones por email al usuario cuando se cancela un turno.
-// 3. Se envian notificaciones por email al usuario cuando se actualiza un turno.

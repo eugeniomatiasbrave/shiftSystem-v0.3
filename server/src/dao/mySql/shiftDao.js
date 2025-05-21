@@ -97,7 +97,7 @@ export default class ShiftDao {
   async reserve(id_shift, id_user) {
     try {
       return await ShiftModel.update(
-        { status: "reserved", id_user },
+        { status: "pending_payment", id_user },
         { where: { id_shift } }
       );
     } catch (error) {

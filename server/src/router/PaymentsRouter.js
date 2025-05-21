@@ -1,7 +1,7 @@
 import BaseRouter from "./BaseRouter.js";
 import paymentController from "../controllers/payment.controller.js";
 import { passportCall } from "../middlewares/passportCall.js";
-import { paymentValidator } from "../middlewares/validate.js";
+
 
 class PaymentsRouter extends BaseRouter {
   init() {
@@ -18,13 +18,13 @@ class PaymentsRouter extends BaseRouter {
     this.get('/shift/:id_shift', ['PUBLIC', 'USER'], passportCall('current'), paymentController.getPaymentsByShiftId);
     
     // POST /api/payments/create - Crear un nuevo pago
-    this.post('/create', ['PUBLIC', 'USER'], passportCall('current'), paymentValidator, paymentController.createPayment);
-    
-    // PUT /api/payments/:id_payment/status - Actualizar estado de pago (solo admin)
-    this.put('/:id_payment/status', ['ADMIN'], passportCall('current'), paymentController.updatePaymentStatus);
+    this.post('/create', ['PUBLIC', 'USER'], passportCall('current'), paymentController.createPayment);
     
     // POST /api/payments/:id_payment/confirm - Confirmar un pago
     this.post('/:id_payment/confirm', ['PUBLIC', 'USER'], passportCall('current'), paymentController.confirmPayment);
+    
+    // PUT /api/payments/:id_payment/status - Actualizar estado de pago (solo admin)
+    this.put('/:id_payment/status', ['ADMIN'], passportCall('current'), paymentController.updatePaymentStatus);
     
     // DELETE /api/payments/:id_payment - Eliminar un pago (solo admin)
     this.delete('/:id_payment', ['ADMIN'], passportCall('current'), paymentController.deletePayment);

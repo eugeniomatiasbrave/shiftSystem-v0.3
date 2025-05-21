@@ -6,7 +6,7 @@ import HttpRes from "../utils/httpResponse.js";
 // POST /api/payments/create - Crear un nuevo pago
 const createPayment = async (req, res, next) => {
   try {
-    const { id_shift, id_user, amount, payment_method, currency = "ARS" } = req.body;
+    const { id_shift, id_user, amount, payment_method, payment_details  } = req.body;
 
     // Validar datos requeridos
     if (!id_shift || !id_user || !amount || !payment_method) {
@@ -34,16 +34,15 @@ const createPayment = async (req, res, next) => {
       id_shift,
       id_user,
       amount,
-      currency,
       payment_method,
-      payment_status: "pending",
-      payment_details: req.body.payment_details || null
+      payment_status: "pending_payment",
+      payment_details
     };
 
     // Guardar el pago en la base de datos
     const newPayment = await paymentServices.createPayment(paymentData);
 
-    // Actualizar el estado del turno a "pending_payment"
+    // Actualizar el estado del turno a "pending"
     await shiftsServices.updateShift(id_shift, {
       id_user: id_user,
       status: "pending_payment"

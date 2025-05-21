@@ -63,29 +63,7 @@ export const shiftValidator = (req, res, next) => {
   next();
 };
 
-// Esquema para validación de pagos
-const paymentSchema = Joi.object({
-  id_shift: Joi.number().required(),
-  id_user: Joi.number().required(), 
-  amount: Joi.number().positive().required(),
-  status: Joi.string()
-    .valid("pending", "completed", "failed", "refunded")
-    .default("pending"),
-  payment_method: Joi.string().valid("credit_card", "debit_card", "transfer", "cash").required(),
-  payment_date: Joi.date().default(Date.now)
-});
 
-export const paymentValidator = (req, res, next) => {
-  const { error } = paymentSchema.validate(req.body, { abortEarly: false });
-  if (error) {
-    const errors = error.details.map(err => ({
-      field: err.path[0],
-      message: err.message
-    }));
-    return res.status(400).json({ status: 'error', errors });
-  }
-  next();
-};
 
 // Middleware genérico para validación con esquema personalizado
 export const validateWithSchema = (schema) => (req, res, next) => {

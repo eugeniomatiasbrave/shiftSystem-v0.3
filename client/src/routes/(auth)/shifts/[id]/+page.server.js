@@ -74,8 +74,8 @@ export const actions = {
         }
 
         try {
-            // Si aquí sólo quieres reservar temporalmente (pre-reserva)
-            const response = await axios.post(
+            // Reservar turno
+            const response = await axios.put(
                 `${API_URL}/shifts/${id_shift}/reserve`, 
                 body,
                 {

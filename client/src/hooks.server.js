@@ -15,7 +15,7 @@ export const handle = async ({ event, resolve }) => {
         const decodedToken = jwt.decode(token);
         event.locals.user = decodedToken;
         event.locals.isAdmin = decodedToken.role === 'admin';
-        console.log('ok hook:', event.locals);
+        //console.log('ok hook:', event.locals);
     }
 
     const user = event.locals.user;
