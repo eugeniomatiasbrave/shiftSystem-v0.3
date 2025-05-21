@@ -456,3 +456,33 @@
 [2025-05-15T17:56:58.477] [INFO] default - Auth header: Bearer undefined
 [2025-05-15T17:56:58.477] [INFO] default - Cookies: {}
 [2025-05-15T17:56:58.477] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T10:54:55.928] [INFO] default - Auth header: undefined
+[2025-05-21T10:54:55.930] [INFO] default - Cookies: {}
+[2025-05-21T10:54:55.931] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T10:54:55.932] [INFO] default - Auth header: undefined
+[2025-05-21T10:54:55.933] [INFO] default - Cookies: {}
+[2025-05-21T10:54:56.066] [INFO] default - Usuario autenticado: eugeniomatiasbrave@gmail.com (ID: 1)
+[2025-05-21T10:54:58.543] [INFO] default - Auth header: undefined
+[2025-05-21T10:54:58.543] [INFO] default - Cookies: {}
+[2025-05-21T10:54:58.544] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T10:54:58.545] [INFO] default - Auth header: undefined
+[2025-05-21T10:54:58.546] [INFO] default - Cookies: {}
+[2025-05-21T10:54:58.547] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T10:55:19.296] [INFO] default - Auth header: undefined
+[2025-05-21T10:55:19.296] [INFO] default - Cookies: {}
+[2025-05-21T10:55:19.297] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T10:55:19.297] [INFO] default - Auth header: undefined
+[2025-05-21T10:55:19.298] [INFO] default - Cookies: {}
+[2025-05-21T10:55:19.298] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T10:59:59.461] [INFO] default - Auth header: undefined
+[2025-05-21T10:59:59.461] [INFO] default - Cookies: {}
+[2025-05-21T10:59:59.462] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T10:59:59.462] [INFO] default - Auth header: undefined
+[2025-05-21T10:59:59.463] [INFO] default - Cookies: {}
+[2025-05-21T10:59:59.463] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T12:04:36.621] [INFO] default - Auth header: undefined
+[2025-05-21T12:04:36.624] [INFO] default - Cookies: {}
+[2025-05-21T12:04:36.625] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T12:04:36.626] [INFO] default - Auth header: undefined
+[2025-05-21T12:04:36.626] [INFO] default - Cookies: {}
+[2025-05-21T12:04:36.627] [WARN] default - Usuario no autenticado: No auth token

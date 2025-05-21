@@ -32,6 +32,10 @@ export const ShiftModel = db.define("shifts", {
       key: 'id_payment'
     }
   },
+  amount: {
+    type: DataTypes.FLOAT,
+    allowNull: true, // Puede ser nulo si el turno no está pagado/confirmado
+  },
   createdAt: { 
     type: DataTypes.DATE, 
     defaultValue: DataTypes.NOW,
