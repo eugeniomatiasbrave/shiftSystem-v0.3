@@ -1,14 +1,6 @@
 node_modules
-
-# Output
-.output
-.vercel
 /.svelte-kit
 /build
-
-# OS
-.DS_Store
-Thumbs.db
 
 # Env
 .env
@@ -21,8 +13,13 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 # Ignorar carpetas y archivos específicos
-/docs/
-.rules
-.directory
-.mcp
+package-lock.json
 
+
+# Ignorar archivos de configuración de cursor
+.cursor
+.vscode
+
+# Ignorar archivos de configuración de cursor
+.cursor
+.vscode

@@ -1067,3 +1067,15 @@
 [2025-05-21T14:52:51.786] [INFO] default - Auth header: Bearer undefined
 [2025-05-21T14:52:51.786] [INFO] default - Cookies: {}
 [2025-05-21T14:52:51.787] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T15:01:23.288] [INFO] default - Auth header: Bearer undefined
+[2025-05-21T15:01:23.290] [INFO] default - Cookies: {}
+[2025-05-21T15:01:23.291] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T15:01:23.292] [INFO] default - Auth header: Bearer undefined
+[2025-05-21T15:01:23.292] [INFO] default - Cookies: {}
+[2025-05-21T15:01:23.293] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T15:01:23.357] [INFO] default - Auth header: Bearer undefined
+[2025-05-21T15:01:23.357] [INFO] default - Cookies: {}
+[2025-05-21T15:01:23.358] [WARN] default - Usuario no autenticado: No auth token
+[2025-05-21T15:01:23.360] [INFO] default - Auth header: Bearer undefined
+[2025-05-21T15:01:23.360] [INFO] default - Cookies: {}
+[2025-05-21T15:01:23.360] [WARN] default - Usuario no autenticado: No auth token

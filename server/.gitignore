@@ -6,7 +6,9 @@ node_modules
 package-lock.json
 
 # Ignorar carpetas y archivos específicos
-/docs/
-.rules
-.directory
-.mcp
+/.cursor
+/.vscode
+
+
+
+
