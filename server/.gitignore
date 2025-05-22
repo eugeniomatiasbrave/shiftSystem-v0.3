@@ -9,6 +9,9 @@ package-lock.json
 /.cursor
 /.vscode
 
+# Verificar remotos configurados
+git remote -v
+
 
 
 
